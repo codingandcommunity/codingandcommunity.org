@@ -1,5 +1,9 @@
 //theme colors and tints (dark900 to normal500 to light100)
 const colors = {
+    darkgrey: "#42434D",
+    byteblue: "#30C3F2",
+    orangeloop: "#E03100",
+
     blue900: "#192c4c",
     blue800: "#2a4a7f",
     blue700: "#3a67b2",

@@ -2,11 +2,12 @@ import React from "react";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
+import colors from "styles/colors";
 import Logo from "components/_ui/Logo";
 
 const HeaderContainer = styled("div")`
     padding-top: 0.5em;
-    background: #30C3F2;
+    background: ${colors.byteblue};
 `
 
 const HeaderContent = styled("div")`
