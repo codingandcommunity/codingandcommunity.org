@@ -6,13 +6,28 @@ import dimensions from "styles/dimensions";
 import Logo from "components/_ui/Logo";
 
 const HeaderContainer = styled("div")`
-    padding-top: 3.75em;
-    padding-bottom: 3em;
+    padding-top: 0.5em;
+    background: #30C3F2;
 `
 
 const HeaderContent = styled("div")`
     display: flex;
     justify-content: space-between;
+ 
+    max-width: ${dimensions.maxwidthDesktop}px;
+    padding-left: ${dimensions.paddingHorizontalDesktop}em;
+    padding-right: ${dimensions.paddingHorizontalDesktop}em;
+    margin: 0 auto;
+
+    @media(max-width: ${dimensions.maxwidthTablet}px) {
+        padding-left: ${dimensions.paddingHorizontalTablet}em;
+        padding-right: ${dimensions.paddingHorizontalTablet}em;
+    }
+
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        padding-left: ${dimensions.paddingHorizontalMobile}em;
+        padding-right: ${dimensions.paddingHorizontalMobile}em;
+    }
 `
 
 const HeaderLinks = styled("div")`
@@ -32,25 +47,24 @@ const HeaderLinks = styled("div")`
     }
 
     a {
-        color: currentColor;
+        color: white;
         text-decoration: none;
         border-bottom: 3px solid transparent;
         font-weight: 600;
         font-size: 0.95em;
         height: 100%;
-        padding-bottom: 1.25em;
-        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        padding-top: 1em;
         display: block;
         position: relative;
 
         &:after {
             position: absolute;
             content: "";
-            bottom: 0;
+            bottom: 0.5rem;
             width: 18px;
             height: 3px;
             background: transparent;
-            bottom: -3px;
             right: 50%;
             margin-right: -9px;
             transition: 100ms ease-in-out background;
@@ -58,14 +72,14 @@ const HeaderLinks = styled("div")`
 
         &:hover {
             &:after {
-                background: ${colors.blue500};
+                background: white;
                 transition: 100ms ease-in-out background;
             }
         }
 
         &.Link--is-active {
             &:after {
-                background: ${colors.blue500};
+                background: white; 
                 transition: 100ms ease-in-out background;
             }
         }
