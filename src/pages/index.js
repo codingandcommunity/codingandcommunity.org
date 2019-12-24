@@ -1,12 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Helmet from "react-helmet";
-import { RichText } from "prismic-reactjs";
 import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
-import About from "components/About";
+import About from "components/index/About";
 import Hero from "components/index/Hero";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
@@ -101,6 +100,12 @@ const RenderBody = ({ home, projects, meta, background }) => (
         <Hero home={home} background={background.url} />
         <LayoutContainer>
             <Section>
+                <About
+                    title={home.about_title}
+                    bio={home.about_bio}
+                />
+            </Section>
+            <Section>
                 {projects.map((project, i) => (
                     <ProjectCard
                         key={i}
@@ -115,13 +120,6 @@ const RenderBody = ({ home, projects, meta, background }) => (
                     See more work <span>&#8594;</span>
                 </WorkAction>
             </Section>
-            <Section>
-                {RichText.render(home.about_title)}
-                <About
-                    bio={home.about_bio}
-                    socialLinks={home.about_links}
-                />
-            </Section>
         </LayoutContainer>
     </>
 );
@@ -129,11 +127,9 @@ const RenderBody = ({ home, projects, meta, background }) => (
 export default ({ data }) => {
     //Required check for no data being returned
     const background = data.prismic.allHomepages.edges[0].node.hero_image;
-    console.log(background);
     const doc = data.prismic.allHomepages.edges.slice(0, 1).pop();
     const projects = data.prismic.allProjects.edges;
     const meta = data.site.siteMetadata;
-    console.log(doc.node);
     if (!doc || !projects) return null;
 
     return (
