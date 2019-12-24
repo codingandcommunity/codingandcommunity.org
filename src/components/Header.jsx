@@ -27,6 +27,8 @@ const HeaderContent = styled("div")`
     @media(max-width: ${dimensions.maxwidthMobile}px) {
         padding-left: ${dimensions.paddingHorizontalMobile}em;
         padding-right: ${dimensions.paddingHorizontalMobile}em;
+        flex-direction: column;
+        justify-content: center;
     }
 `
 
@@ -43,6 +45,7 @@ const HeaderLinks = styled("div")`
 
     @media(max-width: ${dimensions.maxwidthMobile}px) {
         grid-gap: 2.5em;
+        grid-template-columns: repeat(1, auto);
     }
 
     a {
