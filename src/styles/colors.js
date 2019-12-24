@@ -2,6 +2,7 @@
 const colors = {
     darkgrey: "#42434D",
     byteblue: "#30C3F2",
+    bitblue: "#85e1f7",
     orangeloop: "#E03100",
 
     blue900: "#192c4c",
