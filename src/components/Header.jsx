@@ -8,6 +8,9 @@ import OutlineLogo from "components/_ui/OutlineLogo";
 const HeaderContainer = styled("div")`
     padding-top: 0.5em;
     background: ${colors.byteblue};
+    box-shadow: 0px 9px 24px #444444;
+    position: relative;
+    z-index: 10;
 `
 
 const HeaderContent = styled("div")`
