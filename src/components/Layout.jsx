@@ -51,9 +51,9 @@ const Layout = ({ children }) => (
                         <main className="Layout__content">
                             {children}
                         </main>
-                        <Footer />
                     </div>
                 </LayoutContainer>
+                <Footer />
             </div>
         )}
     />
