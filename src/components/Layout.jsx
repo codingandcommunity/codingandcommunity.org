@@ -16,6 +16,9 @@ export const LayoutContainer = styled.div`
     padding-right: ${dimensions.paddingHorizontalDesktop}em;
     margin: 0 auto;
 
+    margin-top: 3em;
+    margin-bottom: 3em;
+
     @media(max-width: ${dimensions.maxwidthTablet}px) {
         padding-left: ${dimensions.paddingHorizontalTablet}em;
         padding-right: ${dimensions.paddingHorizontalTablet}em;

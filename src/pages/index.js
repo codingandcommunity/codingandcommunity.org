@@ -6,11 +6,11 @@ import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
-import Button from "components/_ui/Button";
 import About from "components/About";
 import Hero from "components/index/Hero";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
+import { LayoutContainer } from "../components/Layout";
 
 const Section = styled("div")`
     margin-bottom: 10em;
@@ -99,28 +99,30 @@ const RenderBody = ({ home, projects, meta, background }) => (
             ].concat(meta)}
         />
         <Hero home={home} background={background.url} />
-        <Section>
-            {projects.map((project, i) => (
-                <ProjectCard
-                    key={i}
-                    category={project.node.project_category}
-                    title={project.node.project_title}
-                    description={project.node.project_preview_description}
-                    thumbnail={project.node.project_preview_thumbnail}
-                    uid={project.node._meta.uid}
+        <LayoutContainer>
+            <Section>
+                {projects.map((project, i) => (
+                    <ProjectCard
+                        key={i}
+                        category={project.node.project_category}
+                        title={project.node.project_title}
+                        description={project.node.project_preview_description}
+                        thumbnail={project.node.project_preview_thumbnail}
+                        uid={project.node._meta.uid}
+                    />
+                ))}
+                <WorkAction to={"/work"}>
+                    See more work <span>&#8594;</span>
+                </WorkAction>
+            </Section>
+            <Section>
+                {RichText.render(home.about_title)}
+                <About
+                    bio={home.about_bio}
+                    socialLinks={home.about_links}
                 />
-            ))}
-            <WorkAction to={"/work"}>
-                See more work <span>&#8594;</span>
-            </WorkAction>
-        </Section>
-        <Section>
-            {RichText.render(home.about_title)}
-            <About
-                bio={home.about_bio}
-                socialLinks={home.about_links}
-            />
-        </Section>
+            </Section>
+        </LayoutContainer>
     </>
 );
 

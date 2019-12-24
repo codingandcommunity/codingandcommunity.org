@@ -6,7 +6,7 @@ import { graphql } from 'gatsby';
 import { RichText } from "prismic-reactjs";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
-import Layout from "components/Layout";
+import Layout, { LayoutContainer } from "components/Layout";
 
 const PostHeroContainer = styled("div")`
     max-height: 500px;
@@ -14,6 +14,7 @@ const PostHeroContainer = styled("div")`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    margin-top: 3em;
     margin-bottom: 3em;
 
     img {
@@ -134,31 +135,33 @@ const Post = ({ post, meta }) => {
                 ].concat(meta)}
             />
             <Layout>
-                <PostCategory>
-                    {RichText.render(post.post_category)}
-                </PostCategory>
-                <PostTitle>
-                    {RichText.render(post.post_title)}
-                </PostTitle>
-                <PostMetas>
-                    <PostAuthor>
-                        {post.post_author}
-                    </PostAuthor>
-                    <PostDate>
-                        <Moment format="MMMM D, YYYY">{post.post_date}</Moment>
-                    </PostDate>
-                </PostMetas>
-                    {post.post_hero_image && (
-                    <PostHeroContainer>
-                        <img src={post.post_hero_image.url} alt="bees" />
-                        <PostHeroAnnotation>
-                            {RichText.render(post.post_hero_annotation)}
-                        </PostHeroAnnotation>
-                    </PostHeroContainer>
-                )}
-                <PostBody>
-                    {RichText.render(post.post_body)}
-                </PostBody>
+                <LayoutContainer >
+                    <PostCategory>
+                        {RichText.render(post.post_category)}
+                    </PostCategory>
+                    <PostTitle>
+                        {RichText.render(post.post_title)}
+                    </PostTitle>
+                    <PostMetas>
+                        <PostAuthor>
+                            {post.post_author}
+                        </PostAuthor>
+                        <PostDate>
+                            <Moment format="MMMM D, YYYY">{post.post_date}</Moment>
+                        </PostDate>
+                    </PostMetas>
+                        {post.post_hero_image && (
+                        <PostHeroContainer>
+                            <img src={post.post_hero_image.url} alt="bees" />
+                            <PostHeroAnnotation>
+                                {RichText.render(post.post_hero_annotation)}
+                            </PostHeroAnnotation>
+                        </PostHeroContainer>
+                    )}
+                    <PostBody>
+                        {RichText.render(post.post_body)}
+                    </PostBody>
+                </LayoutContainer>
             </Layout>
         </>
     )

@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
 import Layout from "components/Layout";
 import PostCard from "components/PostCard";
+import { LayoutContainer } from "components/Layout";
 
 const BlogTitle = styled("h1")`
     margin-bottom: 1em;
@@ -68,22 +69,24 @@ const Blog = ({ posts, meta }) => (
             ].concat(meta)}
         />
         <Layout>
-            <BlogTitle>
-                Blog
-            </BlogTitle>
-            <BlogGrid>
-                {posts.map((post, i) => (
-                    <PostCard
-                        key={i}
-                        author={post.node.post_author}
-                        category={post.node.post_category}
-                        title={post.node.post_title}
-                        date={post.node.post_date}
-                        description={post.node.post_preview_description}
-                        uid={post.node._meta.uid}
-                    />
-                ))}
-            </BlogGrid>
+            <LayoutContainer>
+                <BlogTitle>
+                    Blog
+                </BlogTitle>
+                <BlogGrid>
+                    {posts.map((post, i) => (
+                        <PostCard
+                            key={i}
+                            author={post.node.post_author}
+                            category={post.node.post_category}
+                            title={post.node.post_title}
+                            date={post.node.post_date}
+                            description={post.node.post_preview_description}
+                            uid={post.node._meta.uid}
+                        />
+                    ))}
+                </BlogGrid>
+            </LayoutContainer>
         </Layout>
     </>
 );

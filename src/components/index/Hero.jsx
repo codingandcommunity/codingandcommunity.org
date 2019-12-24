@@ -28,9 +28,8 @@ const Background = styled("div")`
     }
 `
 
-
 const HeroContent = styled("div")`
-    padding-top: 6em;
+    padding-top: 3em;
     padding-bottom: 3em;
     margin-bottom: 6em;
     max-width: 830px;
