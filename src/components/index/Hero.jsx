@@ -2,10 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import { RichText } from "prismic-reactjs";
 import styled from "@emotion/styled";
+import { keyframes} from "@emotion/core";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
 import Button from "components/_ui/Button";
 import { LayoutContainer } from "components/Layout";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 
 const Background = styled("div")`
     position: relative;
@@ -60,12 +63,55 @@ const HeroContent = styled("div")`
             }
         }
     }
-
-    svg {
-        margin-top: 10em;
-        min-height: 8em;
+`
+const fadeIn = keyframes`
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+         opacity: 1;
     }
 `
+
+const StyledFA = styled(FontAwesomeIcon)`
+    display: block;
+    margin: auto;
+    position: relative;
+    max-width: ${props => props.csssize};
+    transition: top 0.3s, color 0.3s;
+    animation: ${fadeIn} 2.25s;
+    top: 0px;
+    color: ${props => props.color};
+    margin-top: 5em;
+    &:hover {
+        top: 10px;
+        cursor: pointer;
+        color: ${colors.byteblue};
+    }
+`
+
+const Arrow = ({ color, scale }) => {
+    const scrollToWhoSection = () => {
+      window.scrollBy({
+        top: document.documentElement.clientHeight,
+        left: 0,
+        behavior: "smooth",
+      })
+    }
+  
+    return (
+      <StyledFA
+        icon={faArrowDown}
+        size={scale + "x"} // to account for FA using size '3x' to represent '3em'
+        csssize={scale + "em"} // this two-sizing-props weirdness is a workaround for a FA bug
+        onClick={scrollToWhoSection}
+        color={color}
+      />
+    )
+  }
 
 const Hero = ({home, background}) => (
     <Background background={background}>
@@ -80,6 +126,7 @@ const Hero = ({home, background}) => (
                         {RichText.render(home.hero_button_text)}
                     </Button>
                 </a>
+                <Arrow color="#fff" scale="3" />
             </HeroContent>
         </LayoutContainer>
     </Background>
