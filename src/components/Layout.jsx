@@ -40,6 +40,24 @@ const Layout = ({ children }) => (
                         title
                     }
                 }
+                footerJson {
+                    email
+                    facebook {
+                        url
+                    }
+                    linkedin {
+                        url
+                    }
+                    instagram {
+                        url
+                    }
+                    twitter {
+                        url
+                    }
+                    github {
+                        url
+                    }
+                }
             }
         `}
         render={data => (
@@ -53,7 +71,7 @@ const Layout = ({ children }) => (
                         </main>
                     </div>
                 </LayoutContainer>
-                <Footer />
+                <Footer {...data.footerJson} />
             </div>
         )}
     />

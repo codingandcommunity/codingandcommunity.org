@@ -23,6 +23,7 @@ const FooterContainer = styled("div")`
     background: ${colors.darkgrey};
 
 `
+
 const FooterContent = styled("div")`
     max-width: ${dimensions.maxwidthDesktop}px;
     padding-left: ${dimensions.paddingHorizontalDesktop}em;
@@ -76,6 +77,9 @@ const FooterLink = styled(Link)`
     color: white;
     text-decoration: none;
     font-size: 14px;
+    &:hover {
+        color: ${colors.bitblue};
+    }
 `
 
 const Social = styled("div")`
@@ -110,8 +114,7 @@ const FooterAuthor = styled("a")`
     text-decoration: none;
 `
 
-
-const Footer = () => (
+const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
     <FooterContainer>
         <FooterContent>
             <FooterLogo>
@@ -132,13 +135,13 @@ const Footer = () => (
                 </InfoColumn>
                 <InfoColumn>
                     <h5>Contact</h5>
-                    <FooterLink to='mailto:email@gmail.com'>email@gmail.com</FooterLink>
+                    <FooterLink to={'mailto:' + email}>{email}</FooterLink>
                     <Social>
-                        <SocialInfo info={{url: "https://facebook.com"}} icon={faFacebookF} />
-                        <SocialInfo info={{url: "https://facebook.com"}} icon={faInstagram} />
-                        <SocialInfo info={{url: "https://facebook.com"}} icon={faLinkedin} />
-                        <SocialInfo info={{url: "https://facebook.com"}} icon={faTwitter} />
-                        <SocialInfo info={{url: "https://facebook.com"}} icon={faGithub} />
+                        <SocialInfo info={facebook} icon={faFacebookF} />
+                        <SocialInfo info={instagram} icon={faInstagram} />
+                        <SocialInfo info={linkedin} icon={faLinkedin} />
+                        <SocialInfo info={twitter} icon={faTwitter} />
+                        <SocialInfo info={github} icon={faGithub} />
                     </Social>
                 </InfoColumn>
             </FooterInfo>

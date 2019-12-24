@@ -1,5 +1,4 @@
 import React from "react";
-import colors from "styles/colors";
 
 const OutlineLogo = () => (
     <svg version="1.1" id="Layer_1" x="0px" y="0px" height="50" viewBox="0 0 2000 500" enable-background="new 0 0 2000 500" >
