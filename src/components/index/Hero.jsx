@@ -11,7 +11,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons"
 
 const Background = styled("div")`
-    position: relative;
     height: 100vh;
 
     &:after {
