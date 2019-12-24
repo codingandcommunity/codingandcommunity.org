@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
 import colors from "styles/colors";
-import Logo from "components/_ui/Logo";
+import OutlineLogo from "components/_ui/OutlineLogo";
 
 const HeaderContainer = styled("div")`
     padding-top: 0.5em;
@@ -92,7 +92,7 @@ const Header = () => (
     <HeaderContainer>
         <HeaderContent>
             <Link to="/">
-                <Logo/>
+                <OutlineLogo/>
             </Link>
             <HeaderLinks>
                 <Link

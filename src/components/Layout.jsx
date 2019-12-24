@@ -10,7 +10,7 @@ import Footer from "components/Footer";
 import Header from "components/Header";
 import 'styles/fonts.scss';
 
-const LayoutContainer = styled.div`
+export const LayoutContainer = styled.div`
     max-width: ${dimensions.maxwidthDesktop}px;
     padding-left: ${dimensions.paddingHorizontalDesktop}em;
     padding-right: ${dimensions.paddingHorizontalDesktop}em;
@@ -24,10 +24,6 @@ const LayoutContainer = styled.div`
     @media(max-width: ${dimensions.maxwidthMobile}px) {
         padding-left: ${dimensions.paddingHorizontalMobile}em;
         padding-right: ${dimensions.paddingHorizontalMobile}em;
-    }
-
-    .Layout__content {
-        padding-bottom: 5em;
     }
 `;
 
@@ -63,14 +59,12 @@ const Layout = ({ children }) => (
         render={data => (
             <div>
                 <Header />
-                <LayoutContainer className="div">
-                    <Global styles={[globalStyles, typeStyles]} />
-                    <div className="Layout">
-                        <main className="Layout__content">
-                            {children}
-                        </main>
-                    </div>
-                </LayoutContainer>
+                <Global styles={[globalStyles, typeStyles]} />
+                <div className="Layout">
+                    <main className="Layout__content">
+                        {children}
+                    </main>
+                </div>
                 <Footer {...data.footerJson} />
             </div>
         )}

@@ -5,12 +5,11 @@ import dimensions from "styles/dimensions";
 
 const ButtonContainer = styled("button")`
     padding: 1em 2em;
-    background: ${colors.blue400};
+    background: ${colors.byteblue};
     font-weight: 600;
     color: white;
     outline: none;
     border: none;
-    font-size: 1rem;
     border-radius: 2px;
     position: relative;
     transition: background 100ms ease-in-out;
@@ -21,6 +20,7 @@ const ButtonContainer = styled("button")`
     }
 
     p {
+        font-size: 2em;
         margin: 0;
     }
 
@@ -36,8 +36,8 @@ const ButtonContainer = styled("button")`
     }
 
     &:hover {
+        background: ${colors.bitblue};
         cursor: pointer;
-        background: transparent;
         transition: background 100ms ease-in-out;
     }
 

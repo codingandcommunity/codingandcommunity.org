@@ -8,46 +8,9 @@ import colors from "styles/colors";
 import dimensions from "styles/dimensions";
 import Button from "components/_ui/Button";
 import About from "components/About";
+import Hero from "components/index/Hero";
 import Layout from "components/Layout";
 import ProjectCard from "components/ProjectCard";
-
-const Hero = styled("div")`
-    padding-top: 2.5em;
-    padding-bottom: 3em;
-    margin-bottom: 6em;
-    max-width: 830px;
-
-    @media(max-width:${dimensions.maxwidthMobile}px) {
-       margin-bottom: 3em;
-    }
-
-    h1 {
-        margin-bottom: 1em;
-
-        a {
-            text-decoration: none;
-            transition: all 100ms ease-in-out;
-
-            &:nth-of-type(1) { color: ${colors.blue500}; }
-            &:nth-of-type(2) { color: ${colors.orange500}; }
-            &:nth-of-type(3) { color: ${colors.purple500}; }
-            &:nth-of-type(4) { color: ${colors.green500}; }
-            &:nth-of-type(5) { color: ${colors.teal500}; }
-
-            &:hover {
-                cursor: pointer;
-                transition: all 100ms ease-in-out;
-
-                &:nth-of-type(1) { color: ${colors.blue600};    background-color: ${colors.blue200};}
-                &:nth-of-type(2) { color: ${colors.orange600};  background-color: ${colors.orange200};}
-                &:nth-of-type(3) { color: ${colors.purple600};  background-color: ${colors.purple200};}
-                &:nth-of-type(4) { color: ${colors.green600};   background-color: ${colors.green200};}
-                &:nth-of-type(5) { color: ${colors.teal600};    background-color: ${colors.teal200};}
-
-            }
-        }
-    }
-`
 
 const Section = styled("div")`
     margin-bottom: 10em;
@@ -93,7 +56,9 @@ const WorkAction = styled(Link)`
     }
 `
 
-const RenderBody = ({ home, projects, meta }) => (
+
+
+const RenderBody = ({ home, projects, meta, background }) => (
     <>
         <Helmet
             title={meta.title}
@@ -133,17 +98,7 @@ const RenderBody = ({ home, projects, meta }) => (
                 },
             ].concat(meta)}
         />
-        <Hero>
-            <>
-                {RichText.render(home.hero_title)}
-            </>
-            <a href={home.hero_button_link.url}
-               target="_blank" rel="noopener noreferrer">
-                <Button>
-                    {RichText.render(home.hero_button_text)}
-                </Button>
-            </a>
-        </Hero>
+        <Hero home={home} background={background.url} />
         <Section>
             {projects.map((project, i) => (
                 <ProjectCard
@@ -171,15 +126,17 @@ const RenderBody = ({ home, projects, meta }) => (
 
 export default ({ data }) => {
     //Required check for no data being returned
+    const background = data.prismic.allHomepages.edges[0].node.hero_image;
+    console.log(background);
     const doc = data.prismic.allHomepages.edges.slice(0, 1).pop();
     const projects = data.prismic.allProjects.edges;
     const meta = data.site.siteMetadata;
-
+    console.log(doc.node);
     if (!doc || !projects) return null;
 
     return (
         <Layout>
-            <RenderBody home={doc.node} projects={projects} meta={meta}/>
+            <RenderBody home={doc.node} projects={projects} meta={meta} background={background}/>
         </Layout>
     )
 }
@@ -198,6 +155,7 @@ export const query = graphql`
                     node {
                         hero_title
                         hero_button_text
+                        hero_image
                         hero_button_link {
                             ... on PRISMIC__ExternalLink {
                                 _linkType
