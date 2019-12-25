@@ -7,10 +7,7 @@ import dimensions from "styles/dimensions";
 import Layout from "components/Layout";
 import PostCard from "components/PostCard";
 import { LayoutContainer } from "components/Layout";
-
-const BlogTitle = styled("h1")`
-    margin-bottom: 1em;
-`
+import Title from "components/_ui/Title";
 
 const BlogGrid = styled("div")`
     display: grid;
@@ -70,9 +67,7 @@ const Blog = ({ posts, meta }) => (
         />
         <Layout>
             <LayoutContainer>
-                <BlogTitle>
-                    Blog
-                </BlogTitle>
+                <Title title='Blog' text='Learn more about our story, and where we are headed next.' />
                 <BlogGrid>
                     {posts.map((post, i) => (
                         <PostCard

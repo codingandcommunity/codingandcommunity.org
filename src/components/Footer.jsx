@@ -20,7 +20,7 @@ const FooterContainer = styled("div")`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: ${colors.darkgrey};
+    background: ${colors.visorblue};
 
 `
 
@@ -70,13 +70,14 @@ const InfoColumn = styled("div")`
 
     h5 {
         margin-bottom: 0.5rem;
-        font-weight: 600;
+        font-weight: 500;
     }
 `
 const FooterLink = styled(Link)`
     color: white;
     text-decoration: none;
     font-size: 14px;
+    font-weight: 300;
     &:hover {
         color: ${colors.bitblue};
     }

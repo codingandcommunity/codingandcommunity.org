@@ -23,7 +23,6 @@ const ReadMoreActionStyled = styled(Link)`
     }
 
     &:hover {
-        color: ${colors.byteblue};
         transition: all 150ms ease-in-out;
 
         span {
