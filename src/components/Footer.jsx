@@ -134,6 +134,14 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
                     <FooterLink to="/blog">Blog</FooterLink>
                 </InfoColumn>
                 <InfoColumn>
+                    <h5>Resources</h5>
+                    <FooterLink to="/blog">Start a Chapter</FooterLink>
+                    <FooterLink to="/blog">Constitution</FooterLink>
+                    <FooterLink to="/programs">Swag</FooterLink>
+                    <FooterLink to="/work">Style Guide</FooterLink>
+                    <FooterLink to="/team">weR Gold</FooterLink>
+                </InfoColumn>
+                <InfoColumn>
                     <h5>Contact</h5>
                     <FooterLink to={'mailto:' + email}>{email}</FooterLink>
                     <Social>

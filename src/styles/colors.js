@@ -4,6 +4,8 @@ const colors = {
     byteblue: "#30C3F2",
     bitblue: "#85e1f7",
     orangeloop: "#E03100",
+    brightorange: "#F46B3F",
+    visorblue: "#004E70",
 
     blue900: "#192c4c",
     blue800: "#2a4a7f",

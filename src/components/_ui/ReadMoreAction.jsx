@@ -1,13 +1,13 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
 
 const ReadMoreActionStyled = styled(Link)`
-    font-weight: 600;
+    font-weight: 500;
     text-decoration: none;
-    color: currentColor;
+    color: ${colors.visorblue};
     transition: all 150ms ease-in-out;
     margin-left: auto;
 
