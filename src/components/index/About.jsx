@@ -4,6 +4,7 @@ import colors from "styles/colors";
 import { RichText } from "prismic-reactjs";
 import PropTypes from "prop-types";
 import ReadMoreAction from "components/_ui/ReadMoreAction";
+import Title from 'components/_ui/Title'
 
 const AboutContainer = styled("div")`
     padding-top: 1em;
@@ -12,7 +13,7 @@ const AboutContainer = styled("div")`
 
 const AboutTitle = styled("div")`
     color: ${colors.byteblue};
-    font-size: 3em;
+    font-size: 2em;
     h3 {
         margin-bottom: 0;
     }
@@ -42,9 +43,7 @@ const AboutContent = styled("div")`
 
 const About = ({ title, bio }) => (
     <>
-    <AboutTitle>
-        {RichText.render(title)}
-    </AboutTitle>
+    <Title title='Who We Are' />
     <AboutContainer>
         <AboutContent>
             <AboutBio>

@@ -81,7 +81,7 @@ const StyledFA = styled(FontAwesomeIcon)`
     animation: ${fadeIn} 2.25s;
     top: 0px;
     color: ${props => props.color};
-    margin-top: 5em;
+    margin-bottom: 1em;
     &:hover {
         top: 10px;
         cursor: pointer;
@@ -122,8 +122,8 @@ const Hero = ({home, background}) => (
                         {RichText.render(home.hero_button_text)}
                     </Button>
                 </a>
-                <Arrow color="#fff" scale="3" />
             </HeroContent>
+            <Arrow color="#fff" scale="3" />
         </LayoutContainer>
     </Background>
 );

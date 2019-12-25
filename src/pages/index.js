@@ -13,6 +13,8 @@ import { LayoutContainer } from "../components/Layout";
 
 const Section = styled("div")`
     margin-bottom: 10em;
+    height: 100vh;
+    padding-top: 4em;
     display: flex;
     flex-direction: column;
 
