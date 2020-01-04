@@ -5,21 +5,28 @@ import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
-import About from "components/index/About";
 import Hero from "components/index/Hero";
+import About from "components/index/About";
+import Do from "components/index/Do";
+import ReadMoreAction from "components/_ui/ReadMoreAction";
+import Title from "components/_ui/Title";
 import Layout from "components/Layout";
-import ProjectCard from "components/ProjectCard";
+import ProgramCard from "components/programs/ProgramCard";
 import { LayoutContainer } from "../components/Layout";
 
 const Section = styled("div")`
-    margin-bottom: 10em;
-    height: 100vh;
+    min-height: 100vh;
     padding-top: 4em;
     display: flex;
     flex-direction: column;
 
     @media(max-width:${dimensions.maxwidthTablet}px) {
         margin-bottom: 4em;
+    }
+
+    &:nth-child(3) {
+        background-color: ${colors.visorblue};
+        color: white;
     }
 
     &:last-of-type {
@@ -59,7 +66,7 @@ const WorkAction = styled(Link)`
 
 
 
-const RenderBody = ({ home, projects, meta, background }) => (
+const RenderBody = ({ home, programs, meta, background }) => (
     <>
         <Helmet
             title={meta.title}
@@ -100,29 +107,38 @@ const RenderBody = ({ home, projects, meta, background }) => (
             ].concat(meta)}
         />
         <Hero home={home} background={background.url} />
-        <LayoutContainer>
             <Section>
+                <LayoutContainer>
                 <About
                     title={home.about_title}
                     bio={home.about_bio}
                 />
+                </LayoutContainer>
             </Section>
             <Section>
-                {projects.map((project, i) => (
-                    <ProjectCard
-                        key={i}
-                        category={project.node.project_category}
-                        title={project.node.project_title}
-                        description={project.node.project_preview_description}
-                        thumbnail={project.node.project_preview_thumbnail}
-                        uid={project.node._meta.uid}
-                    />
-                ))}
-                <WorkAction to={"/work"}>
-                    See more work <span>&#8594;</span>
-                </WorkAction>
+                <LayoutContainer>
+                <Do
+                    title={home.about_title}
+                    bio={home.about_bio}
+                />
+                </LayoutContainer>
             </Section>
-        </LayoutContainer>
+            <Section>
+                <LayoutContainer>
+                    <Title title='Programs' />
+                    {programs.map((program, i) => (
+                        <ProgramCard
+                            key={i}
+                            category={program.node.program_category}
+                            title={program.node.program_title}
+                            description={program.node.program_preview_description}
+                            thumbnail={program.node.program_preview_thumbnail}
+                            uid={program.node._meta.uid}
+                        />
+                    ))}
+                    <ReadMoreAction action='Read more about our community impact' to='/programs' />
+                </LayoutContainer>
+            </Section>
     </>
 );
 
@@ -130,20 +146,20 @@ export default ({ data }) => {
     //Required check for no data being returned
     const background = data.prismic.allHomepages.edges[0].node.hero_image;
     const doc = data.prismic.allHomepages.edges.slice(0, 1).pop();
-    const projects = data.prismic.allProjects.edges;
+    const programs = data.prismic.allPrograms.edges.slice(0, 3);
     const meta = data.site.siteMetadata;
-    if (!doc || !projects) return null;
+    if (!doc || !programs) return null;
 
     return (
         <Layout>
-            <RenderBody home={doc.node} projects={projects} meta={meta} background={background}/>
+            <RenderBody home={doc.node} programs={programs} meta={meta} background={background}/>
         </Layout>
     )
 }
 
 RenderBody.propTypes = {
     home: PropTypes.object.isRequired,
-    projects: PropTypes.array.isRequired,
+    programs: PropTypes.array.isRequired,
     meta: PropTypes.object.isRequired,
 };
 
@@ -171,14 +187,14 @@ export const query = graphql`
                     }
                 }
             }
-            allProjects {
+            allPrograms {
                 edges {
                     node {
-                        project_title
-                        project_preview_description
-                        project_preview_thumbnail
-                        project_category
-                        project_post_date
+                        program_title
+                        program_preview_description
+                        program_preview_thumbnail
+                        program_category
+                        program_post_date
                         _meta {
                             uid
                         }
