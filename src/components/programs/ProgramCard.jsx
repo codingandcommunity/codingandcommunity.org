@@ -163,7 +163,7 @@ const ProgramCardImageContainer = styled("div")`
 `
 
 const ProgramCard = ({ category, title, description, thumbnail, uid}) => (
-    <ProgramCardContainer to={`/work/${uid}`}>
+    <ProgramCardContainer to={`/programs/${uid}`}>
         <ProgramCardContent className="ProjectCardContent">
             <ProgramCardCategory>
                 {category[0].text}
