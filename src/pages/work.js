@@ -3,14 +3,36 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
-import Layout from "components/Layout";
-import ProjectCard from "components/ProjectCard";
+import Layout from "../components/Layout";
+import { LayoutContainer } from "../components/Layout";
+import colors from "styles/colors";
+import dimensions from "styles/dimensions";
+import Company from "../components/work/Company"
 
 const WorkTitle = styled("h1")`
     margin-bottom: 1em;
 `
 
-const Work = ({ projects, meta }) => (
+const Section = styled("div")`
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    @media(max-width:${dimensions.maxwidthTablet}px) {
+        margin-bottom: 4em;
+    }
+
+    &:nth-child(even) {
+        background-color: ${colors.visorblue};
+        color: white;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+`
+
+const Work = ({ companies, meta }) => (
     <>
         <Helmet
             title={`Work | Prist, Gatsby & Prismic Starter`}
@@ -51,32 +73,48 @@ const Work = ({ projects, meta }) => (
             ].concat(meta)}
         />
         <Layout>
-            <WorkTitle>
-                Work
-            </WorkTitle>
-            <>
-                {projects.map((project, i) => (
-                    <ProjectCard
-                        key={i}
-                        category={project.node.project_category}
-                        title={project.node.project_title}
-                        description={project.node.project_preview_description}
-                        thumbnail={project.node.project_preview_thumbnail}
-                        uid={project.node._meta.uid}
-                    />
-                ))}
-            </>
+            <Section id='teacher'>
+                <LayoutContainer>
+                    Teacher
+                </LayoutContainer>
+            </Section>
+            <Section id='parent'>
+                <LayoutContainer>
+                    Parent
+                </LayoutContainer>
+            </Section>
+            <Section id='company'>
+                <LayoutContainer>
+                    <Company companies={companies}/>
+                </LayoutContainer>
+            </Section>
+            <Section id='university'>
+                <LayoutContainer>
+                    Parent
+                </LayoutContainer>
+            </Section>
+            <Section id='donors'>
+                <LayoutContainer>
+                    Parent
+                </LayoutContainer>
+            </Section>
         </Layout>
     </>
 );
 
 export default ({ data }) => {
     const projects = data.prismic.allProjects.edges;
+    const companies = data.prismic.allCompanys.edges;
     const meta = data.site.siteMetadata;
+
     if (!projects) return null;
 
+    if (!companies) return null;
+
+    console.log(companies);
+
     return (
-        <Work projects={projects} meta={meta}/>
+        <Work companies={companies} meta={meta}/>
     )
 }
 
@@ -97,6 +135,21 @@ export const query = graphql`
                         project_post_date
                         _meta {
                             uid
+                        }
+                    }
+                }
+            }
+            allCompanys {
+                edges {
+                    node {
+                        company_logo
+                        company_name
+                        company_website {
+                            _linkType
+                            ... on PRISMIC__ExternalLink {
+                                _linkType
+                                url
+                            }
                         }
                     }
                 }
