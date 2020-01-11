@@ -12,6 +12,10 @@ const globalStyles = css`
         min-height: 100%;
     }
 
+    html {
+        scroll-behavior: smooth;
+    }
+
     body {
         width: 100%;
         margin: 0 auto;

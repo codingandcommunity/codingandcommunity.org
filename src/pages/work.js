@@ -75,9 +75,9 @@ const Work = ({ companies, meta }) => (
             ].concat(meta)}
         />
         <Layout>
-            <Section id='university'>
+            <Section>
                 <LayoutContainer>
-                    Parent
+                    <Role />
                 </LayoutContainer>
             </Section>
             <Section id='teacher'>
@@ -88,6 +88,11 @@ const Work = ({ companies, meta }) => (
             <Section id='company'>
                 <LayoutContainer>
                     <Company companies={companies}/>
+                </LayoutContainer>
+            </Section>
+            <Section id='university'>
+                <LayoutContainer>
+                    Parent
                 </LayoutContainer>
             </Section>
         </Layout>
@@ -102,8 +107,6 @@ export default ({ data }) => {
     if (!projects) return null;
 
     if (!companies) return null;
-
-    console.log(companies);
 
     return (
         <Work companies={companies} meta={meta}/>
