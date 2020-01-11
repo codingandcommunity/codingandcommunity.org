@@ -9,6 +9,7 @@ import colors from "styles/colors";
 import dimensions from "styles/dimensions";
 import Company from "../components/work/Company"
 import Educator from "../components/work/Educator"
+import Join from "../components/work/Join"
 import Role from "../components/work/Role"
 
 const WorkTitle = styled("h1")`
@@ -92,7 +93,7 @@ const Work = ({ companies, meta }) => (
             </Section>
             <Section id='university'>
                 <LayoutContainer>
-                    Parent
+                    <Join />
                 </LayoutContainer>
             </Section>
         </Layout>

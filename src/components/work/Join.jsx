@@ -8,7 +8,7 @@ import Title from 'components/_ui/Title'
 import Button from 'components/_ui/Button'
 import conference from 'images/stepconference.jpg';
 
-const EducatorContainer = styled("div")`
+const JoinContainer = styled("div")`
     display: grid;
 
     p {
@@ -16,7 +16,7 @@ const EducatorContainer = styled("div")`
     }
 `
 
-const EducatorContent = styled("div")`
+const JoinContent = styled("div")`
     padding-bottom: 3em;
     width: 100%;
     text-align: center;
@@ -104,23 +104,23 @@ const StyledButton = styled(Button)`
 `
 
 
-const Educator = ({ title, bio }) => (
+const Join = ({ title, bio }) => (
     <>
-    <Title title='Start A Program With Us!' color='white' background={colors.visorblue}/>
-    <EducatorContainer>
-        <EducatorContent>
+    <Title title='Join Our Team!' color='white' background={colors.visorblue}/>
+    <JoinContainer>
+        <JoinContent>
             <p>There are a lot of reasons why you would want to do this. Pls..... pls.</p>
             <Programs>
                 <Program>
-                    <h4>Workshop</h4>
+                    <h4>Instructor</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> 
                 </Program>
                 <Program>
-                    <h4>Classroom Volunteering</h4>
+                    <h4>Curriculum Design</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </Program>
                 <Program>
-                    <h4>All Day Programs</h4>
+                    <h4>Executive Board</h4>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                 </Program>
             </Programs>
@@ -140,18 +140,18 @@ const Educator = ({ title, bio }) => (
             <a>
                 <StyledButton>
                     <h3>
-                        Start a program with us!
+                       Apply Now 
                     </h3>
                 </StyledButton>
             </a>
-        </EducatorContent>
-    </EducatorContainer>
+        </JoinContent>
+    </JoinContainer>
     </>
 )
 
-export default Educator;
+export default Join;
 
-Educator.propTypes = {
+Join.propTypes = {
     bio: PropTypes.array.isRequired,
     socialLinks: PropTypes.array.isRequired,
 };
