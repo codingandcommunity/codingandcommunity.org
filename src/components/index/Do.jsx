@@ -45,7 +45,7 @@ const AboutContent = styled("div")`
 
 const Do = ({ title, bio }) => (
     <DoContainer>
-        <Title title='Who We Are' />
+        <Title title='Who We Are' color='white' background={colors.visorblue} />
         <AboutContainer>
             <AboutContent>
                 <AboutBio>

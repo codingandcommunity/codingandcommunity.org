@@ -94,7 +94,7 @@ const RenderBody = ({ home, programs, meta, background }) => (
             </Section>
             <Section>
                 <LayoutContainer>
-                    <Title title='Programs' />
+                    <Title title='Programs' color={colors.visorblue} />
                     {programs.map((program, i) => (
                         <ProgramCard
                             key={i}

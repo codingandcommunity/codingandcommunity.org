@@ -96,7 +96,7 @@ const Team = ({ members, meta }) => (
         />
         <Layout>
             <LayoutContainer>
-                <Title title='Team' text='100% volunteer and student driven.'/>
+                <Title title='Team' text='100% volunteer and student driven.' color={colors.visorblue} />
                 <Members>
                     {members.map((member, i) => (
                         <Member member={member.node} />

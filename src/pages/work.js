@@ -8,6 +8,8 @@ import { LayoutContainer } from "../components/Layout";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
 import Company from "../components/work/Company"
+import Educator from "../components/work/Educator"
+import Role from "../components/work/Role"
 
 const WorkTitle = styled("h1")`
     margin-bottom: 1em;
@@ -73,29 +75,19 @@ const Work = ({ companies, meta }) => (
             ].concat(meta)}
         />
         <Layout>
-            <Section id='teacher'>
-                <LayoutContainer>
-                    Teacher
-                </LayoutContainer>
-            </Section>
-            <Section id='parent'>
-                <LayoutContainer>
-                    Parent
-                </LayoutContainer>
-            </Section>
-            <Section id='company'>
-                <LayoutContainer>
-                    <Company companies={companies}/>
-                </LayoutContainer>
-            </Section>
             <Section id='university'>
                 <LayoutContainer>
                     Parent
                 </LayoutContainer>
             </Section>
-            <Section id='donors'>
+            <Section id='teacher'>
                 <LayoutContainer>
-                    Parent
+                    <Educator />
+                </LayoutContainer>
+            </Section>
+            <Section id='company'>
+                <LayoutContainer>
+                    <Company companies={companies}/>
                 </LayoutContainer>
             </Section>
         </Layout>

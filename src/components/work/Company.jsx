@@ -2,31 +2,11 @@ import React from "react";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
-import { RichText } from "prismic-reactjs";
 import PropTypes from "prop-types";
-import ReadMoreAction from "components/_ui/ReadMoreAction";
 import Title from 'components/_ui/Title'
 
 const CompanyContainer = styled("div")`
     display: grid;
-`
-
-const CompanyTitle = styled("div")`
-    color: ${colors.byteblue};
-    font-size: 2em;
-    h3 {
-        margin-bottom: 0;
-    }
-`
-
-const CompanyBio = styled("div")`
-    padding-bottom: 3em;
-    max-width: 480px;
-    margin-right: 2em;
-
-    p {
-        margin-top: 0;
-    }
 `
 
 const CompanyContent = styled("div")`
@@ -95,7 +75,7 @@ const PartnerLogo = styled("div")`
 
 const Company = ({ companies }) => (
     <>
-    <Title title='Corporate Partners' />
+    <Title title='Corporate Partners' color={colors.visorblue} />
     <CompanyContainer>
         <CompanyContent>
             <HowToHelp>

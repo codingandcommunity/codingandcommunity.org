@@ -43,7 +43,7 @@ const AboutContent = styled("div")`
 
 const About = ({ title, bio }) => (
     <>
-    <Title title='Who We Are' />
+    <Title title='Who We Are' color={colors.visorblue}/>
     <AboutContainer>
         <AboutContent>
             <AboutBio>

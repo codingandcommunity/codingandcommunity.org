@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
+import colors from "styles/colors";
 import Layout, { LayoutContainer } from "components/Layout";
 import Title from "components/_ui/Title";
 import ProgramCard from "components/programs/ProgramCard";
@@ -50,7 +51,7 @@ const Work = ({ programs, meta }) => (
         />
         <Layout>
             <LayoutContainer>
-                <Title title='Programs' text='Learn more about our community impact.' />
+                <Title title='Programs' text='Learn more about our community impact.' color={colors.visorblue} />
                 <>
                     {programs.map((program, i) => (
                         <ProgramCard

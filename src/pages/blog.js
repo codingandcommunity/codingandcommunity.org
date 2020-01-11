@@ -8,6 +8,7 @@ import Layout from "components/Layout";
 import PostCard from "components/PostCard";
 import { LayoutContainer } from "components/Layout";
 import Title from "components/_ui/Title";
+import colors from "styles/colors";
 
 const BlogGrid = styled("div")`
     display: grid;
@@ -67,7 +68,7 @@ const Blog = ({ posts, meta }) => (
         />
         <Layout>
             <LayoutContainer>
-                <Title title='Blog' text='Learn more about our story, and where we are headed next.' />
+                <Title title='Blog' text='Learn more about our story, and where we are headed next.' color={colors.visorblue} />
                 <BlogGrid>
                     {posts.map((post, i) => (
                         <PostCard
