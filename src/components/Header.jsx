@@ -1,25 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "gatsby";
 import styled from "@emotion/styled";
 import dimensions from "styles/dimensions";
 import colors from "styles/colors";
 import OutlineLogo from "components/_ui/OutlineLogo";
 
+import {
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    UncontrolledDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
+    NavbarText
+  } from 'reactstrap';
+
+
 const HeaderContainer = styled("div")`
-    padding-top: 0.5em;
     background: ${colors.byteblue};
+    color: white;
     box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.4);
     position: relative;
     z-index: 10;
+    padding: 0;
 `
 
-const HeaderContent = styled("div")`
-    display: flex;
-    justify-content: space-between;
- 
+const HeaderContent = styled(Navbar)`
     max-width: ${dimensions.maxwidthDesktop}px;
     padding-left: ${dimensions.paddingHorizontalDesktop}em;
     padding-right: ${dimensions.paddingHorizontalDesktop}em;
+    padding-top: 0;
+    padding-bottom: 0;
     margin: 0 auto;
 
     @media(max-width: ${dimensions.maxwidthTablet}px) {
@@ -28,39 +44,34 @@ const HeaderContent = styled("div")`
     }
 
     @media(max-width: ${dimensions.maxwidthMobile}px) {
-        padding-left: ${dimensions.paddingHorizontalMobile}em;
-        padding-right: ${dimensions.paddingHorizontalMobile}em;
-        flex-direction: column;
-        justify-content: center;
     }
 `
 
-const HeaderLinks = styled("div")`
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 3em;
+const HeaderLinks = styled(Nav)`
     justify-content: flex-end;
     width: 100%;
 
     @media(max-width: ${dimensions.maxwidthTablet}px) {
-        grid-gap: 5.5em;
     }
 
     @media(max-width: ${dimensions.maxwidthMobile}px) {
-        grid-gap: 2.5em;
-        grid-template-columns: repeat(1, auto);
+    }
+
+    li {
+        margin-left: 1rem;
+        margin-right: 1rem;
     }
 
     a {
         color: white;
         text-decoration: none;
         border-bottom: 3px solid transparent;
-        font-weight: 400;
+        font-weight: 500;
         font-size: 0.95em;
         height: 100%;
-        padding-bottom: 0.25em;
+        padding-bottom: 1em;
         padding-top: 1em;
-        display: block;
+        display: inline-block;
         position: relative;
 
         &:after {
@@ -91,36 +102,57 @@ const HeaderLinks = styled("div")`
     }
 `
 
-const Header = () => (
+const Header = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
+
+    return (
     <HeaderContainer>
-        <HeaderContent>
-            <Link to="/">
-                <OutlineLogo/>
-            </Link>
-            <HeaderLinks>
+      <HeaderContent className='navbar-dark' expand="md">
+        <NavbarBrand href="/"><OutlineLogo /></NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <HeaderLinks className="nav mr-auto navbar-right" navbar>
+            <NavItem>
+                <Link
+                    activeClassName="Link--is-active"
+                    to="/launchpad">
+                    Launchpad 
+                </Link>
+            </NavItem>
+            <NavItem>
                 <Link
                     activeClassName="Link--is-active"
                     to="/programs">
                     Programs
                 </Link>
+            </NavItem>
+            <NavItem>
                 <Link
                     activeClassName="Link--is-active"
                     to="/work">
                     Work With Us
                 </Link>
+            </NavItem>
+            <NavItem>
                 <Link
                     activeClassName="Link--is-active"
                     to="/team">
                     Team
                 </Link>
+            </NavItem>
+            <NavItem>
                 <Link
                     activeClassName="Link--is-active"
                     to="/blog">
                     Blog
                 </Link>
-            </HeaderLinks>
-        </HeaderContent>
-    </HeaderContainer>
-)
+            </NavItem>
+          </HeaderLinks>
+        </Collapse>
+      </HeaderContent>
+      </HeaderContainer>
+    );
+}
 
 export default Header;

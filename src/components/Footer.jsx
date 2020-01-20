@@ -58,7 +58,14 @@ const FooterLogo = styled("div")`
 
 const FooterInfo = styled("div")`
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 const InfoColumn = styled("div")`
     display: flex;
