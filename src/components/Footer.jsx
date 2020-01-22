@@ -58,7 +58,14 @@ const FooterLogo = styled("div")`
 
 const FooterInfo = styled("div")`
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
+    
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        flex-direction: column;
+        justify-content: center;
+    }
 `
 const InfoColumn = styled("div")`
     display: flex;
@@ -113,6 +120,10 @@ const FooterAuthor = styled("a")`
     font-size: 0.75em;
     color: white;
     text-decoration: none;
+
+    :hover {
+        color: white;
+    }
 `
 
 const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
@@ -122,7 +133,7 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
                 <Link to="/">
                     <OutlineLogo />
                 </Link>
-                <FooterAuthor>
+                <FooterAuthor href='/'>
                     © 2020 coding&&community 
                 </FooterAuthor>
             </FooterLogo>

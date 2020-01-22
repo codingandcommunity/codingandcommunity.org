@@ -8,3 +8,5 @@
 // const { linkResolver } = require('./src/utils/prismic-configuration');
 
 // registerLinkResolver(linkResolver);
+
+import 'bootstrap/dist/css/bootstrap.css';
