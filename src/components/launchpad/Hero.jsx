@@ -8,14 +8,14 @@ import dimensions from "styles/dimensions";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import LaunchpadLogo from "components/launchpad/LaunchpadLogo";
-import HeroImage from "images/launchpadhero2.jpg";
+import HeroImage from "images/launchpadhero3.jpg";
 
 var countDownDate = new Date("Mar 21, 2020 09:00:00").getTime();
 
 // Update the count down every 1 second
 var interval = setInterval(function() {
 
-    if (window.location.pathname == '/launchpad') {
+    if (window.location.pathname == '/launchpad' || window.location.pathname == '/launchpad/') {
         // Get today's date and time
         var now = new Date().getTime();
 
@@ -39,17 +39,27 @@ var interval = setInterval(function() {
     }
 }, 1000);
 
+const fadeIn = keyframes`
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+         opacity: 1;
+    }
+`
+
 const HeroLayoutContainer = styled.div`
     max-width: ${dimensions.maxwidthDesktop}px;
     padding-left: 50px; 
     padding-right: 50px; 
     margin: 0 auto;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-
-    margin-bottom: 3em;
 
     @media(max-width: ${dimensions.maxwidthTablet}px) {
         padding-left: ${dimensions.paddingHorizontalTablet}em;
@@ -68,7 +78,6 @@ const Background = styled("div")`
         content: '';
         position: absolute;
         top:0;
-        margin-top: 60px;
         width: 100vw;
         height: 100vh;
         left:50%;
@@ -81,7 +90,9 @@ const Background = styled("div")`
         @media(max-width: ${dimensions.maxwidthMobile}px) {
             padding-left: ${dimensions.paddingHorizontalMobile}em;
             padding-right: ${dimensions.paddingHorizontalMobile}em;
-            background-size: contain;
+            background-size: cover;
+            background-position: center;
+            margin-top: 0;
         }
     }
 `
@@ -96,11 +107,23 @@ const HeroContent = styled("div")`
        margin-bottom: 3em;
     }
 
-    h1 {
+    svg {
+        -webkit-filter: drop-shadow( 2px 2px 10px rgba(255, 255, 255, .7));
+        filter: drop-shadow( 2px 2px 10px rgba(255, 255, 255, .7));
+
+        transition: top 0.3s, color 0.3s;
+        animation: ${fadeIn} 2.00s;
+
+    }
+
+    h1, h2 {
+        display: block;
         height: 2rem;
         margin-bottom: 1em;
         color: white;
         text-shadow: 4px 4px 20px black;
+        transition: top 0.3s, color 0.3s;
+        animation: ${fadeIn} 3.00s;
 
         a {
             text-decoration: none;
@@ -121,30 +144,18 @@ const HeroContent = styled("div")`
         }
     }
 `
-const fadeIn = keyframes`
-    0% {
-        opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-         opacity: 1;
-    }
-`
-
 const StyledFA = styled(FontAwesomeIcon)`
     display: block;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     position: relative;
     max-width: ${props => props.csssize};
     transition: top 0.3s, color 0.3s;
-    animation: ${fadeIn} 2.25s;
+    animation: ${fadeIn} 4.00s;
     top: 0px;
     color: ${props => props.color};
-    margin-bottom: 1em;
     &:hover {
         top: 10px;
         cursor: pointer;
@@ -176,6 +187,8 @@ const Hero = ({home}) => (
     <Background background={HeroImage}>
         <HeroLayoutContainer styles={{"margin-top": 0}}>
             <HeroContent>
+                <LaunchpadLogo />
+                <h2>March 21st-22nd, 2020</h2>
                 <h1 id='launchpad-countdown'></h1>
             </HeroContent>
             <Arrow color="#fff" scale="3" />
