@@ -120,6 +120,10 @@ const FooterAuthor = styled("a")`
     font-size: 0.75em;
     color: white;
     text-decoration: none;
+
+    :hover {
+        color: white;
+    }
 `
 
 const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
@@ -129,7 +133,7 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
                 <Link to="/">
                     <OutlineLogo />
                 </Link>
-                <FooterAuthor>
+                <FooterAuthor href='/'>
                     © 2020 coding&&community 
                 </FooterAuthor>
             </FooterLogo>

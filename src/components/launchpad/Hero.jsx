@@ -44,6 +44,10 @@ const HeroLayoutContainer = styled.div`
     padding-left: 50px; 
     padding-right: 50px; 
     margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     margin-bottom: 3em;
 
@@ -64,7 +68,7 @@ const Background = styled("div")`
         content: '';
         position: absolute;
         top:0;
-        margin-top: 4rem;
+        margin-top: 60px;
         width: 100vw;
         height: 100vh;
         left:50%;
@@ -73,21 +77,27 @@ const Background = styled("div")`
         
         background: url(${props => props.background}) no-repeat;
         background-size: cover;
+
+        @media(max-width: ${dimensions.maxwidthMobile}px) {
+            padding-left: ${dimensions.paddingHorizontalMobile}em;
+            padding-right: ${dimensions.paddingHorizontalMobile}em;
+            background-size: contain;
+        }
     }
 `
 
 const HeroContent = styled("div")`
-    padding-bottom: 3em;
-    margin-top: 30rem;
-    margin-bottom: 0em;
-    max-width: 830px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 
     @media(max-width:${dimensions.maxwidthMobile}px) {
        margin-bottom: 3em;
     }
 
     h1 {
+        height: 2rem;
         margin-bottom: 1em;
         color: white;
         text-shadow: 4px 4px 20px black;
@@ -126,6 +136,8 @@ const fadeIn = keyframes`
 const StyledFA = styled(FontAwesomeIcon)`
     display: block;
     margin: auto;
+    margin-top: 0;
+    margin-bottom: 3rem;
     position: relative;
     max-width: ${props => props.csssize};
     transition: top 0.3s, color 0.3s;
