@@ -11,7 +11,7 @@ import l4 from 'images/l4.jpg';
 
 const RegisterSection = styled('div')`
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 4rem;
 `;
 
 const Desc = styled('p')`
@@ -41,6 +41,7 @@ const Values = styled('div')`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2rem;
 
 
     h3 {
@@ -51,7 +52,8 @@ const Values = styled('div')`
         flex-basis: 33%;
 
         @media(max-width:${dimensions.maxwidthMobile}px) {
-            flex-basis: 100%;
+            font-size: 1rem;
+            padding: 0;
         }
     }
 `;
