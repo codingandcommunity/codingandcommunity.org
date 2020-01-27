@@ -22,20 +22,15 @@ const CompanyContent = styled("div")`
 const HowToHelp = styled("div")`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 `
 
 const Way = styled("div")`
-    max-width: 40%; 
-
-    @media(max-width: ${dimensions.maxwidthTablet}px) {
-        padding-left: 100%; 
-        padding-right: 100%; 
-    }
+    flex-basis: 50%;
 
     @media(max-width: ${dimensions.maxwidthMobile}px) {
-        padding-left: 100%; 
-        padding-right: 100%;
+        flex-basis: 100%;
     }
 
     h4 {
@@ -71,7 +66,6 @@ const PartnerLogo = styled("div")`
         max-width: 100%;
     }
 `
-
 
 const Company = ({ companies }) => (
     <>

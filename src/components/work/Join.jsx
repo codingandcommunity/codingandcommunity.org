@@ -9,7 +9,7 @@ import Button from 'components/_ui/Button'
 import conference from 'images/stepconference.jpg';
 
 const JoinContainer = styled("div")`
-    display: grid;
+    width: 100%;
 
     p {
         margin-top: 0;
@@ -34,22 +34,17 @@ const JoinContent = styled("div")`
 const Programs = styled("div")`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 `
 
 const Program = styled("div")`
-    max-width: 40%; 
+    flex-basis: 33%;
     padding-left: 1rem;
     padding-right: 1rem;
 
-    @media(max-width: ${dimensions.maxwidthTablet}px) {
-        padding-left: 100%; 
-        padding-right: 100%; 
-    }
-
     @media(max-width: ${dimensions.maxwidthMobile}px) {
-        padding-left: 100%; 
-        padding-right: 100%;
+        flex-basis: 100%;
     }
 
     h4 {
@@ -63,12 +58,17 @@ const Testimonial = styled("div")`
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 `
 
 const Quote = styled("div")`
-    max-width: 50%;
+    flex-basis: 50%;
     padding: 2em;
+
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+    }
 
     h2 {
         font-style: italic;
@@ -86,7 +86,11 @@ const Quote = styled("div")`
 `
 
 const TestimonialImage = styled("div")`
-    max-width: 50%;
+    flex-basis: 50%;
+
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+    }
 
     img {
         width: 350px;
