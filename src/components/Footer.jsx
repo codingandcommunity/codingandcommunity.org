@@ -15,7 +15,7 @@ import {
 
 
 const FooterContainer = styled("div")`
-    padding-top: 1em;
+    padding-top: 2em;
     padding-bottom: 3em;
     display: flex;
     flex-direction: column;
@@ -74,6 +74,12 @@ const InfoColumn = styled("div")`
     padding-right: 1em;
 
     color: white;
+
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        margin-top: 1.5rem;:
+        padding-left: ${dimensions.paddingHorizontalMobile}px;
+        padding-right: ${dimensions.paddingHorizontalMobile}px;
+    }
 
     h5 {
         margin-bottom: 0.5rem;

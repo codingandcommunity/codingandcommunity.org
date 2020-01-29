@@ -16,13 +16,9 @@ import { LayoutContainer } from "../components/Layout";
 
 const Section = styled("div")`
     min-height: 100vh;
-    padding-top: 4em;
+    padding-top: 2em;
     display: flex;
     flex-direction: column;
-
-    @media(max-width:${dimensions.maxwidthTablet}px) {
-        margin-bottom: 4em;
-    }
 
     &:nth-child(3) {
         background-color: ${colors.visorblue};
