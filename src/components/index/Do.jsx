@@ -55,11 +55,11 @@ const AboutContent = styled("div")`
 
 const Do = ({ title, bio }) => (
     <DoContainer>
-        <Title title='Who We Are' color='white' background={colors.visorblue} />
+        <Title title='What We Do' color='white' background={colors.visorblue} />
         <AboutContainer>
             <AboutContent>
                 <AboutBio>
-                    {RichText.render(bio)}
+                We teach underrepresented high school and middle school students in the Troy, NY area coding through various regular and one-day events. Some of our offerings include the STEP program, where we offer weekly lessons at RPI in a different coding language each semester to students in the area, the Troy High School program, where we travel to Troy High School to teach students coding, and Launchpad, our annual hackathon for local high school students hosted at RPI.
                 </AboutBio>
                 <DoPicture>
                     <iframe height="315" src="https://www.youtube.com/embed/wxQBK9eQoCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

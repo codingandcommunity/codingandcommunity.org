@@ -13,6 +13,7 @@ const AboutContainer = styled("div")`
 const AboutBio = styled("div")`
     padding-bottom: 3em;
     flex-basis: 40%;
+    font-size: 18px;
 
     @media(max-width:${dimensions.maxwidthMobile}px) {
         flex-basis: 100%;
@@ -59,14 +60,18 @@ const About = ({ title, bio }) => (
     <AboutContainer>
         <AboutContent>
             <AboutBio>
-                {RichText.render(bio)}
+            We are a passionate group of students from Rensselaer Polytechnic Institute whose goal 
+            is to close the disparities in education opportunities for computer science, related to 
+            race/ethnicity, gender, and socioeconomic status.
+
+            We are a completely student driven organization
             </AboutBio>
             <AboutVideo>
                 <iframe src="https://www.youtube.com/embed/wxQBK9eQoCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </AboutVideo>
         </AboutContent>
     </AboutContainer>
-    <ReadMoreAction action='Read more about our mission' to='/mission' />
+    <ReadMoreAction action='Read more about our mission' to='/blog/mission' />
     </>
 )
 

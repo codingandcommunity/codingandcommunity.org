@@ -101,11 +101,8 @@ const Work = ({ companies, meta }) => (
 );
 
 export default ({ data }) => {
-    const projects = data.prismic.allProjects.edges;
     const companies = data.prismic.allCompanys.edges;
     const meta = data.site.siteMetadata;
-
-    if (!projects) return null;
 
     if (!companies) return null;
 
@@ -115,26 +112,12 @@ export default ({ data }) => {
 }
 
 Work.propTypes = {
-    projects: PropTypes.array.isRequired,
+    companies: PropTypes.array.isRequired,
 };
 
 export const query = graphql`
     {
         prismic {
-            allProjects {
-                edges {
-                    node {
-                        project_title
-                        project_preview_description
-                        project_preview_thumbnail
-                        project_category
-                        project_post_date
-                        _meta {
-                            uid
-                        }
-                    }
-                }
-            }
             allCompanys {
                 edges {
                     node {

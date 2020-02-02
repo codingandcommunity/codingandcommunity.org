@@ -56,6 +56,18 @@ const Layout = ({ children }) => (
                     github {
                         url
                     }
+                    chapter {
+                        url
+                    }
+                    constitution {
+                        url
+                    }
+                    swag {
+                        url
+                    }
+                    style {
+                        url
+                    }
                 }
             }
         `}

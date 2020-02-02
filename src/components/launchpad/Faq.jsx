@@ -19,6 +19,7 @@ const FaqContent = styled('div')`
         flex-basis: 50%;
         padding-left: 2rem;
         padding-right: 2rem;
+        margin-bottom: 2rem;
 
         @media(max-width:${dimensions.maxwidthMobile}px) {
             flex-basis: 100%;
@@ -27,7 +28,7 @@ const FaqContent = styled('div')`
         h3 {
             font-weight: 500;
             color: ${colors.visorblue};
-            margin-bottom: 0;
+            margin-bottom: 1rem;
         }
 
         p {

@@ -11,6 +11,7 @@ const PostCardContainer = styled(Link)`
     padding: 3em 2.5em 2.25em 2.5em;
     border-radius: 3px;
     text-decoration: none;
+    width: 100%;
     color: currentColor;
     display: flex;
     flex-direction: column;

@@ -6,6 +6,11 @@ import dimensions from 'styles/dimensions';
 
 const WorkshopSection = styled('div')`
     text-align: center;
+
+    h3 {
+        margin-top: 1rem;
+        color: ${colors.visorblue};
+    }
 `;
 
 const WorkshopContent = styled('div')`
@@ -39,27 +44,10 @@ const WorkshopContent = styled('div')`
 const Workshop = () => (
     <WorkshopSection>
         <Header title='Workshops' />
+        <h3>
+            Workshops to be announced soon!
+        </h3>
         <WorkshopContent>
-            <div>
-                <h3>Best Website</h3>
-                <p>Show off your HTML, CSS, and JavaScript skills, and make a dazzling website!</p>
-            </div>
-            <div>
-                <h3>Best Hardware Hack</h3>
-                <p>There's more to tech than just writing code on a screen. Use an Arduino or Raspberry PI to build the best hardware hack</p>
-            </div>
-            <div>
-                <h3>Best Game</h3>
-                <p>Whether its a platformer or a top down game, design and implement the best game possible.</p>
-            </div>
-            <div>
-                <h3>Most Creative</h3>
-                <p>Design and create the most innovative, thoughtful and unique solution to a real world problem.</p>
-            </div>
-            <div>
-                <h3>Bootstrap Award</h3>
-                <p>This award is given to a team that shows perseverence and learns new skills while tackling a difficult challenge.</p>
-            </div>
         </WorkshopContent>
     </WorkshopSection>
 );

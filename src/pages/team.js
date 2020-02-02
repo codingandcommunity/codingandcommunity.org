@@ -12,6 +12,7 @@ const Profile = styled("img")`
     height: 10em;
     width: 10em;
     border-radius: 5em;
+    object-fit: cover;
 `
 
 const Info = styled("div")`
@@ -45,6 +46,8 @@ const Member = ({ member }) => (
 
 const MemberContainer = styled("div")`
     margin: 2em;
+    flex-basis: 25%;
+    text-align: center;
 `
 
 const Members = styled("div")`

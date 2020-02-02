@@ -28,6 +28,8 @@ const HowToHelp = styled("div")`
 
 const Way = styled("div")`
     flex-basis: 50%;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     @media(max-width: ${dimensions.maxwidthMobile}px) {
         flex-basis: 100%;
@@ -37,6 +39,10 @@ const Way = styled("div")`
         text-align: center;
         font-weight: 500;
         color: ${colors.visorblue}
+    }
+
+    p {
+        font-size: 18px;
     }
 `
 
@@ -48,6 +54,7 @@ const PartnerLogos = styled("div")`
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex-wrap: wrap;
 `
 
 const PartnerSlug = styled("p")`
@@ -58,12 +65,16 @@ const PartnerSlug = styled("p")`
 `
 
 const PartnerLogo = styled("div")`
-    max-width: 10%;
 
     max-height: 100px;
+    max-width: 300px;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     img {
-        max-width: 100%;
+        height: 100px;
+        max-width: 100%; 
+        object-fit: contain;
     }
 `
 
@@ -75,11 +86,15 @@ const Company = ({ companies }) => (
             <HowToHelp>
                 <Way>
                     <h4>Donate Laptops</h4>
-                    <p>Pls give us laptops fam.... erghimerwhnrejhnrej erhjerhnjer erhjer hjenpgive us laptops fam.... erghimerwhnrejhnrej erhjerhnjer erhjer hgive us laptops fam.... erghimerwhnrejhnrej erhjerhnjer erhjer hgive us laptops fam.... erghimerwhnrejhnrej erhjerhnjer erhjer hr</p>
+                    <p>
+                    Have a bunch of old company tech that’s going in the trash? We’ll take it off your hands and use it to help train the next generation of software engineers.
+                    </p>
                 </Way>
                 <Way>
                     <h4>Swag</h4>
-                    <p>Pls give us laptops fam.... erghimerwhnrejhnrej erhjerhnjer erhjer hjenr</p>
+                    <p>
+                    Donating t-shirts, stickers and other swag is a great way to help get our participants excited about exploring the world of tech.
+                    </p>
                 </Way>
             </HowToHelp>
             <Partners>

@@ -117,15 +117,21 @@ const Join = ({ title, bio }) => (
             <Programs>
                 <Program>
                     <h4>Instructor</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> 
+                    <p>
+                    Work with us as an instructor for our STEP and Troy High School 
+                    </p>
                 </Program>
                 <Program>
                     <h4>Curriculum Design</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>
+                    We pride ourselves on producing almost all of our curriculum in-house. This goes on to make our programs the best they can be. Or you can help us spread our material to CS teachers around the country!
+                    </p>
                 </Program>
                 <Program>
                     <h4>Executive Board</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>
+                    Help us cook up new events, programs, and goals for Coding&&Community long-term. Almost everything we do started as an idea in a classroom. However you want to help us shape the future of the club, the sky's the limit!
+                    </p>
                 </Program>
             </Programs>
             <hr></hr>

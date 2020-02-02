@@ -95,6 +95,15 @@ const FooterLink = styled(Link)`
         color: ${colors.bitblue};
     }
 `
+const FooterLinkExternal = styled("a")`
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 300;
+    &:hover {
+        color: ${colors.bitblue};
+    }
+`
 
 const Social = styled("div")`
     display: flex;
@@ -132,7 +141,7 @@ const FooterAuthor = styled("a")`
     }
 `
 
-const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
+const Footer = ({email, facebook, instagram, linkedin, twitter, github, chapter, constitution, style, swag}) => (
     <FooterContainer>
         <FooterContent>
             <FooterLogo>
@@ -153,11 +162,10 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github}) => (
                 </InfoColumn>
                 <InfoColumn>
                     <h5>Resources</h5>
-                    <FooterLink to="/blog">Start a Chapter</FooterLink>
-                    <FooterLink to="/blog">Constitution</FooterLink>
-                    <FooterLink to="/programs">Swag</FooterLink>
-                    <FooterLink to="/work">Style Guide</FooterLink>
-                    <FooterLink to="/team">weR Gold</FooterLink>
+                    <FooterLink to={chapter.url}>Start a Chapter</FooterLink>
+                    <FooterLinkExternal href={constitution.url}>Constitution</FooterLinkExternal>
+                    <FooterLinkExternal href={swag.url}>Swag</FooterLinkExternal>
+                    <FooterLinkExternal href={style.url}>Style Guide</FooterLinkExternal>
                 </InfoColumn>
                 <InfoColumn>
                     <h5>Contact</h5>
