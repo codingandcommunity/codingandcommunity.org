@@ -32,19 +32,25 @@ const RoleContent = styled("div")`
 const RoleCards = styled("div")`
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
 `
 
 const RoleCard = styled(Link)`
-    margin-right: 2rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     padding: 2rem;
-    width: 40%;
+    flex-basis: 20%;
     text-align: center;
     text-decoration: none;
     box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
+
+    @media(max-width:${dimensions.maxwidthMobile}px) {
+        margin-bottom: 2rem;
+        flex-basis: 100%;
+    }
     
     img {
         width: 200px;

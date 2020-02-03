@@ -3,6 +3,7 @@ import Header from './Header';
 import styled from '@emotion/styled';
 import mark from 'images/mark.jpg';
 import dimensions from 'styles/dimensions';
+import colors from 'styles/colors';
 
 const SpeakerSection = styled('div')`
     text-align: center;
@@ -27,11 +28,16 @@ const SpeakerContent = styled('div')`
             flex-basis: 100%;
         }
     }
-    
-    p {
+
+    div {
         flex-basis: 50%;
+        font-size: 18px;
         @media(max-width:${dimensions.maxwidthMobile}px) {
             flex-basis: 100%;
+        }
+            
+        h3 {
+            color: ${colors.visorblue};
         }
     }
 `;
@@ -41,9 +47,13 @@ const Speaker = () => (
         <Header title='Speaker' />
         <SpeakerContent>
             <img src={mark} alt='Mark Little'></img>
-            <p>
-               iLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. 
-            </p>
+            <div>
+                <h3>Mark Little</h3>
+                <h5>Founder of RiseHigh</h5>
+                <p>
+                After a long career as a GE executive that included directing the GE Global Research Center (GRC), Mark Little founded Rise High with the goal of exposing students to a variety of STEM concepts in the real world.
+                </p>
+            </div>
         </SpeakerContent>
     </SpeakerSection>
 );

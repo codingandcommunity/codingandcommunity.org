@@ -1,42 +1,55 @@
 import React from "react";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
+import dimensions from "styles/dimensions";
 import { RichText } from "prismic-reactjs";
 import PropTypes from "prop-types";
 import ReadMoreAction from "components/_ui/ReadMoreAction";
 import Title from 'components/_ui/Title'
 
 const AboutContainer = styled("div")`
-    padding-top: 1em;
-    display: grid;
-`
-
-const AboutTitle = styled("div")`
-    color: ${colors.byteblue};
-    font-size: 2em;
-    h3 {
-        margin-bottom: 0;
-    }
 `
 
 const AboutBio = styled("div")`
     padding-bottom: 3em;
-    max-width: 480px;
-    margin-right: 2em;
+    flex-basis: 40%;
+    font-size: 18px;
+
+    @media(max-width:${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+    }
 
     p {
         margin-top: 0;
     }
 `
 
+const AboutVideo = styled("div")`
+    flex-basis: 40%;
+
+    iframe, object, embed {
+        width: 500px;
+        height: 315px;
+    }
+
+    @media(max-width:${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+        iframe, object, embed {
+            width: 300px;
+            height: 225px;
+        }
+    }
+
+`
+
 const AboutContent = styled("div")`
-    padding-top: 1em;
     padding-bottom: 3em;
     width: 100%;
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 `
 
 
@@ -47,14 +60,18 @@ const About = ({ title, bio }) => (
     <AboutContainer>
         <AboutContent>
             <AboutBio>
-                {RichText.render(bio)}
+            We are a passionate group of students from Rensselaer Polytechnic Institute whose goal 
+            is to close the disparities in education opportunities for computer science, related to 
+            race/ethnicity, gender, and socioeconomic status.
+
+            We are a completely student driven organization
             </AboutBio>
-            <div>
-                <iframe width="500" height="315" src="https://www.youtube.com/embed/wxQBK9eQoCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <AboutVideo>
+                <iframe src="https://www.youtube.com/embed/wxQBK9eQoCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </AboutVideo>
         </AboutContent>
     </AboutContainer>
-    <ReadMoreAction action='Read more about our mission' to='/mission' />
+    <ReadMoreAction action='Read more about our mission' to='/blog/mission' />
     </>
 )
 

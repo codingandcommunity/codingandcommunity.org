@@ -11,7 +11,7 @@ import l4 from 'images/l4.jpg';
 
 const RegisterSection = styled('div')`
     text-align: center;
-    margin-top: 8rem;
+    margin-top: 4rem;
 `;
 
 const Desc = styled('p')`
@@ -41,6 +41,7 @@ const Values = styled('div')`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 2rem;
 
 
     h3 {
@@ -51,7 +52,8 @@ const Values = styled('div')`
         flex-basis: 33%;
 
         @media(max-width:${dimensions.maxwidthMobile}px) {
-            flex-basis: 100%;
+            font-size: 1rem;
+            padding: 0;
         }
     }
 `;
@@ -87,9 +89,11 @@ const Register = () => (
             <strong>Launchpad</strong> is a hackathon for local high school students hosted at RPI by <a href='/'>coding&&community</a>. Students will have the opportunity to work together to brainstorm, design, and code a project from scratch. We're excited to see your creativity unleashed!   
         </Desc>
         <RegisterButton>
-            <Button>
-                Register Now 🚀
-            </Button>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdB6QAV0WeLeQy4YUM6fM3YG4EtYHU5MX3MWYStHaHbf9dmIQ/viewform">
+                <Button>
+                    Register Now 🚀
+                </Button>
+            </a>
         </RegisterButton>
         <Images>
            <img src={l1}/> 

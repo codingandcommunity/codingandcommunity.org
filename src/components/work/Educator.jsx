@@ -9,7 +9,7 @@ import Button from 'components/_ui/Button'
 import conference from 'images/stepconference.jpg';
 
 const EducatorContainer = styled("div")`
-    display: grid;
+    width: 100%;
 
     p {
         margin-top: 0;
@@ -32,24 +32,20 @@ const EducatorContent = styled("div")`
 `
 
 const Programs = styled("div")`
+    width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 `
 
 const Program = styled("div")`
-    max-width: 40%; 
+    flex-basis: 33%;
     padding-left: 1rem;
     padding-right: 1rem;
 
-    @media(max-width: ${dimensions.maxwidthTablet}px) {
-        padding-left: 100%; 
-        padding-right: 100%; 
-    }
-
     @media(max-width: ${dimensions.maxwidthMobile}px) {
-        padding-left: 100%; 
-        padding-right: 100%;
+        flex-basis: 100%;
     }
 
     h4 {
@@ -63,12 +59,17 @@ const Testimonial = styled("div")`
     margin-top: 2rem;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-around;
 `
 
 const Quote = styled("div")`
-    max-width: 50%;
+    flex-basis: 50%;
     padding: 2em;
+
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+    }
 
     h2 {
         font-style: italic;
@@ -86,7 +87,11 @@ const Quote = styled("div")`
 `
 
 const TestimonialImage = styled("div")`
-    max-width: 50%;
+    flex-basis: 50%;
+
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+    }
 
     img {
         width: 350px;
@@ -106,22 +111,28 @@ const StyledButton = styled(Button)`
 
 const Educator = ({ title, bio }) => (
     <>
-    <Title title='Start A Program With Us!' color='white' background={colors.visorblue}/>
+    <Title title='Start A Program!' color='white' background={colors.visorblue}/>
     <EducatorContainer>
         <EducatorContent>
-            <p>There are a lot of reasons why you would want to do this. Pls..... pls.</p>
+            <p>If you are a teacher, librarian, school administrator or educational non-profit, we would love to work with you!</p>
             <Programs>
                 <Program>
                     <h4>Workshop</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p> 
+                    <p>
+                        We would love to contribute to your event with a workshop about tech! In the past, we have talked about Git, brief introductions to various programming languages, and our journey in cultivating CS education in the Capital region. 
+                    </p>
                 </Program>
                 <Program>
                     <h4>Classroom Volunteering</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>
+                        Our organization works with high school teachers to give a college student’s perspective on getting a CS degree. Whether you’re looking for long-term involvement or a one-time class visit, let us know!
+                    </p>
                 </Program>
                 <Program>
                     <h4>All Day Programs</h4>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                    <p>
+                        Hackathons and expos are some of the best ways for students to interact with technology. We would love to help you make your next big event a success!
+                    </p>
                 </Program>
             </Programs>
             <hr></hr>

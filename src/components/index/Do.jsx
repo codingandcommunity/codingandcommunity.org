@@ -1,35 +1,46 @@
 import React from "react";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
-import { RichText } from "prismic-reactjs";
+import dimensions from "styles/dimensions";
 import PropTypes from "prop-types";
 import ReadMoreAction from "components/_ui/ReadMoreAction";
 import Title from 'components/_ui/Title'
+import l2 from 'images/l2.jpg';
 
 const DoContainer = styled("div")`
     background: ${colors.visorblue}
 `
 
 const AboutContainer = styled("div")`
-    padding-top: 1em;
-    display: grid;
-`
-
-const AboutTitle = styled("div")`
-    color: ${colors.byteblue};
-    font-size: 2em;
-    h3 {
-        margin-bottom: 0;
-    }
 `
 
 const AboutBio = styled("div")`
     padding-bottom: 3em;
     max-width: 480px;
     margin-right: 2em;
+    flex-basis: 40%;
+
+    @media(max-width:${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+    }
 
     p {
         margin-top: 0;
+    }
+`
+
+const DoPicture = styled("div")`
+    flex-basis: 40%;
+
+    img {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    @media(max-width:${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
     }
 `
 
@@ -37,23 +48,29 @@ const AboutContent = styled("div")`
     padding-top: 1em;
     padding-bottom: 3em;
     width: 100%;
+    flex-basis: 40%;
+
+    @media(max-width:${dimensions.maxwidthMobile}px) {
+        flex-basis: 100%;
+    }
 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 `
 
 const Do = ({ title, bio }) => (
     <DoContainer>
-        <Title title='Who We Are' color='white' background={colors.visorblue} />
+        <Title title='What We Do' color='white' background={colors.visorblue} />
         <AboutContainer>
             <AboutContent>
                 <AboutBio>
-                    {RichText.render(bio)}
+                We teach underrepresented high school and middle school students in the Troy, NY area coding through various regular and one-day events. Some of our offerings include the STEP program, where we offer weekly lessons at RPI in a different coding language each semester to students in the area, the Troy High School program, where we travel to Troy High School to teach students coding, and Launchpad, our annual hackathon for local high school students hosted at RPI.
                 </AboutBio>
-                <div>
-                    <iframe width="500" height="315" src="https://www.youtube.com/embed/wxQBK9eQoCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
+                <DoPicture>
+                    <img src={l2} />
+                </DoPicture>
             </AboutContent>
         </AboutContainer>
         <ReadMoreAction action='Read more about our mission' to='/mission' />

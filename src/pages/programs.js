@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
+import MyHelmet from "components/MyHelmet";
 import Helmet from "react-helmet";
 import { graphql } from "gatsby";
-import styled from "@emotion/styled";
 import colors from "styles/colors";
 import Layout, { LayoutContainer } from "components/Layout";
 import Title from "components/_ui/Title";
@@ -11,44 +11,7 @@ import ProgramCard from "components/programs/ProgramCard";
 
 const Work = ({ programs, meta }) => (
     <>
-        <Helmet
-            title={`Work | Prist, Gatsby & Prismic Starter`}
-            titleTemplate={`%s | Work | Prist, Gatsby & Prismic Starter`}
-            meta={[
-                {
-                    name: `description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:title`,
-                    content: `Work | Prist, Gatsby & Prismic Starter`,
-                },
-                {
-                    property: `og:description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: meta.title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: meta.description,
-                },
-            ].concat(meta)}
-        />
+        <MyHelmet meta={meta} />
         <Layout>
             <LayoutContainer>
                 <Title title='Programs' text='Learn more about our community impact.' color={colors.visorblue} />

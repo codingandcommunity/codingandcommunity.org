@@ -11,6 +11,11 @@ const ScheduleSection = styled('div')`
         color: ${colors.darkgrey};
         font-size: 1.3rem;
     }
+
+    h3 {
+        color: ${colors.visorblue};
+        margin-top: 1rem;
+    }
 `;
 
 const Days = styled('div')`
@@ -62,8 +67,9 @@ const ScheduleTable = styled('div')`
 const Schedule = () => (
     <ScheduleSection>
         <Header title='Schedule' />
-        <p>Remember, you don't have to come both days!</p>
-        <Days>
+        <h3>Schedule to be announced soon!</h3>
+        <p>Remember, you don't have to come both days.</p>
+        {/*<Days>
             <ScheduleTable>
                 <h3>March 21st</h3>
                 <table>
@@ -120,6 +126,7 @@ const Schedule = () => (
             </ScheduleTable>
         </Days>
         <p>All workshops are optional. Balance them with work time!</p>
+        */}
     </ScheduleSection>
 );
 

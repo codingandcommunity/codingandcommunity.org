@@ -20,7 +20,7 @@ const ButtonContainer = styled("button")`
     }
 
     p {
-        font-size: 2em;
+        font-size: 1rem;
         margin: 0;
     }
 

@@ -25,6 +25,26 @@ const Background = styled("div")`
         background-size: cover;
     }
 `
+const HeroLayoutContainer = styled.div`
+    max-width: ${dimensions.maxwidthDesktop}px;
+    padding-left: 50px; 
+    padding-right: 50px; 
+    margin: 0 auto;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @media(max-width: ${dimensions.maxwidthTablet}px) {
+        padding-left: ${dimensions.paddingHorizontalTablet}em;
+        padding-right: ${dimensions.paddingHorizontalTablet}em;
+    }
+
+    @media(max-width: ${dimensions.maxwidthMobile}px) {
+        padding-left: ${dimensions.paddingHorizontalMobile}em;
+        padding-right: ${dimensions.paddingHorizontalMobile}em;
+    }
+`
 
 const HeroContent = styled("div")`
     padding-top: 3em;
@@ -111,7 +131,7 @@ const Arrow = ({ color, scale }) => {
 
 const Hero = ({home, background}) => (
     <Background background={background}>
-        <LayoutContainer>
+        <HeroLayoutContainer>
             <HeroContent>
                 <>
                     {RichText.render(home.hero_title)}
@@ -124,7 +144,7 @@ const Hero = ({home, background}) => (
                 </a>
             </HeroContent>
             <Arrow color="#fff" scale="3" />
-        </LayoutContainer>
+        </HeroLayoutContainer>
     </Background>
 );
 
