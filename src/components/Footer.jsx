@@ -169,7 +169,7 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github, chapter,
                 </InfoColumn>
                 <InfoColumn>
                     <h5>Contact</h5>
-                    <FooterLink to={'mailto:' + email}>{email}</FooterLink>
+                    <FooterLinkExternal href={'mailto:' + email}>{email}</FooterLinkExternal>
                     <Social>
                         <SocialInfo info={facebook} icon={faFacebookF} />
                         <SocialInfo info={instagram} icon={faInstagram} />
