@@ -113,12 +113,12 @@ const Join = ({ title, bio }) => (
     <Title title='Join Our Team!' color='white' background={colors.visorblue}/>
     <JoinContainer>
         <JoinContent>
-            <p>There are a lot of reasons why you would want to do this. Pls..... pls.</p>
+            <p>Joining us is a great way for RPI students to be involved in the wider Troy community.</p>
             <Programs>
                 <Program>
                     <h4>Instructor</h4>
                     <p>
-                    Work with us as an instructor for our STEP and Troy High School 
+                    Work with us as an instructor for our STEP and Troy High School programs, and volunteer for our one day programs as well.
                     </p>
                 </Program>
                 <Program>
@@ -135,7 +135,7 @@ const Join = ({ title, bio }) => (
                 </Program>
             </Programs>
             <hr></hr>
-            <Testimonial>
+            {/*<Testimonial>
                 <Quote>
                     <h2>
                         “This is a totally real quote about one of our programs. This is filler to make it look longer.”
@@ -153,7 +153,7 @@ const Join = ({ title, bio }) => (
                        Apply Now 
                     </h3>
                 </StyledButton>
-            </a>
+            </a>*/}
         </JoinContent>
     </JoinContainer>
     </>

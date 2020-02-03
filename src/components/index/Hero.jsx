@@ -15,7 +15,7 @@ const Background = styled("div")`
         content: '';
         position: absolute;
         top:0;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         left:50%;
         transform:translateX(-50%);
@@ -136,8 +136,7 @@ const Hero = ({home, background}) => (
                 <>
                     {RichText.render(home.hero_title)}
                 </>
-                <a href={home.hero_button_link.url}
-                    target="_blank" rel="noopener noreferrer">
+                <a href={home.hero_button_link.url}>
                     <Button>
                         {RichText.render(home.hero_button_text)}
                     </Button>
