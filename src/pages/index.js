@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import MyHelmet from "components/MyHelmet";
 import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
@@ -33,44 +33,7 @@ const Section = styled("div")`
 
 const RenderBody = ({ home, programs, meta, background }) => (
     <>
-        <Helmet
-            title={meta.title}
-            titleTemplate={`%s | ${meta.title}`}
-            meta={[
-                {
-                    name: `description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:title`,
-                    content: meta.title,
-                },
-                {
-                    property: `og:description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: meta.title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: meta.description,
-                },
-            ].concat(meta)}
-        />
+        <MyHelmet meta={meta} />
         <Hero home={home} background={background.url} />
             <Section>
                 <LayoutContainer>

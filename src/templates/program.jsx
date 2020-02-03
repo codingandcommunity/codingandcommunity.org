@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import MyHelmet from "components/MyHelmet";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
 import { graphql } from 'gatsby';
@@ -51,44 +51,7 @@ const ProgramBody = styled("div")`
 const Program = ({ program, meta }) => {
     return (
         <>
-            <Helmet
-                title={`${program.program_title[0].text} | Prist, Gatsby & Prismic Starter`}
-                titleTemplate={`%s | ${meta.title}`}
-                meta={[
-                    {
-                        name: `description`,
-                        content: meta.description,
-                    },
-                    {
-                        property: `og:title`,
-                        content: `${program.program_title[0].text} | Prist, Gatsby & Prismic Starter`,
-                    },
-                    {
-                        property: `og:description`,
-                        content: meta.description,
-                    },
-                    {
-                        property: `og:type`,
-                        content: `website`,
-                    },
-                    {
-                        name: `twitter:card`,
-                        content: `summary`,
-                    },
-                    {
-                        name: `twitter:creator`,
-                        content: meta.author,
-                    },
-                    {
-                        name: `twitter:title`,
-                        content: meta.title,
-                    },
-                    {
-                        name: `twitter:description`,
-                        content: meta.description,
-                    },
-                ].concat(meta)}
-            />
+            <MyHelmet meta={meta} />
             <Layout>
                 <ProgramTitle>
                     {RichText.render(program.program_title)}

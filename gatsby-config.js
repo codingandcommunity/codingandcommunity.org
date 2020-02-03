@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Prist | Gatsby & Prismic Starter`,
-        description: `A starter powered by Gatsby and Prismic to showcase portfolios and blogs.`,
-    author: `Marguerite Roth | marguerite.io`,
+    title: `Coding&&Community | Closing the gap in the tech industry.`,
+    description: `Our goal is to goal is to close the disparities in education opportunities for computer science, related to race/ethnicity, gender, and socioeconomic status`,
+    author: `Coding&&Community@RPI`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -39,6 +39,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
+        icon: 'src/images/favicon.png'
       },
     },
     // https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/

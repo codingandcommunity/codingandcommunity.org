@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import MyHelmet from "components/MyHelmet";
 import Moment from 'react-moment';
 import { graphql } from 'gatsby';
 import { RichText } from "prismic-reactjs";
@@ -96,44 +96,7 @@ const PostDate = styled("div")`
 const Post = ({ post, meta }) => {
     return (
         <>
-            <Helmet
-                title={`${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`}
-                titleTemplate={`%s | ${meta.title}`}
-                meta={[
-                    {
-                        name: `description`,
-                        content: meta.description,
-                    },
-                    {
-                        property: `og:title`,
-                        content: `${post.post_title[0].text} | Prist, Gatsby & Prismic Starter`,
-                    },
-                    {
-                        property: `og:description`,
-                        content: meta.description,
-                    },
-                    {
-                        property: `og:type`,
-                        content: `website`,
-                    },
-                    {
-                        name: `twitter:card`,
-                        content: `summary`,
-                    },
-                    {
-                        name: `twitter:creator`,
-                        content: meta.author,
-                    },
-                    {
-                        name: `twitter:title`,
-                        content: meta.title,
-                    },
-                    {
-                        name: `twitter:description`,
-                        content: meta.description,
-                    },
-                ].concat(meta)}
-            />
+            <MyHelmet meta={meta} />
             <Layout>
                 <LayoutContainer >
                     <PostCategory>

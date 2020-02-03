@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import MyHelmet from "components/MyHelmet";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import Layout from "components/Layout";
@@ -59,44 +59,7 @@ const Members = styled("div")`
 
 const Team = ({ members, meta }) => (
     <>
-        <Helmet
-            title={`Work | Prist, Gatsby & Prismic Starter`}
-            titleTemplate={`%s | Work | Prist, Gatsby & Prismic Starter`}
-            meta={[
-                {
-                    name: `description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:title`,
-                    content: `Work | Prist, Gatsby & Prismic Starter`,
-                },
-                {
-                    property: `og:description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: meta.title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: meta.description,
-                },
-            ].concat(meta)}
-        />
+        <MyHelmet meta={meta} />
         <Layout>
             <LayoutContainer>
                 <Title title='Team' text='100% volunteer and student driven.' color={colors.visorblue} />

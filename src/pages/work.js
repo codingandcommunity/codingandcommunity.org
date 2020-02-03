@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Helmet from "react-helmet";
+import MyHelmet from "components/MyHelmet";
 import { graphql } from "gatsby";
 import styled from "@emotion/styled";
 import Layout from "../components/Layout";
@@ -11,10 +11,6 @@ import Company from "../components/work/Company"
 import Educator from "../components/work/Educator"
 import Join from "../components/work/Join"
 import Role from "../components/work/Role"
-
-const WorkTitle = styled("h1")`
-    margin-bottom: 1em;
-`
 
 const Section = styled("div")`
     min-height: 100vh;
@@ -37,44 +33,7 @@ const Section = styled("div")`
 
 const Work = ({ companies, meta }) => (
     <>
-        <Helmet
-            title={`Work | Prist, Gatsby & Prismic Starter`}
-            titleTemplate={`%s | Work | Prist, Gatsby & Prismic Starter`}
-            meta={[
-                {
-                    name: `description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:title`,
-                    content: `Work | Prist, Gatsby & Prismic Starter`,
-                },
-                {
-                    property: `og:description`,
-                    content: meta.description,
-                },
-                {
-                    property: `og:type`,
-                    content: `website`,
-                },
-                {
-                    name: `twitter:card`,
-                    content: `summary`,
-                },
-                {
-                    name: `twitter:creator`,
-                    content: meta.author,
-                },
-                {
-                    name: `twitter:title`,
-                    content: meta.title,
-                },
-                {
-                    name: `twitter:description`,
-                    content: meta.description,
-                },
-            ].concat(meta)}
-        />
+        <MyHelmet meta={meta} />
         <Layout>
             <Section>
                 <LayoutContainer>
