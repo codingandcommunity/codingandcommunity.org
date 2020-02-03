@@ -136,7 +136,7 @@ const Educator = ({ title, bio }) => (
                 </Program>
             </Programs>
             <hr></hr>
-            <Testimonial>
+            {/*<Testimonial>
                 <Quote>
                     <h2>
                         “This is a totally real quote about one of our programs. This is filler to make it look longer.”
@@ -154,7 +154,7 @@ const Educator = ({ title, bio }) => (
                         Start a program with us!
                     </h3>
                 </StyledButton>
-            </a>
+            </a>*/}
         </EducatorContent>
     </EducatorContainer>
     </>
