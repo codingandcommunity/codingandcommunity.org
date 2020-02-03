@@ -1,7 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
 import MyHelmet from "components/MyHelmet";
-import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 import colors from "styles/colors";
 import Layout, { LayoutContainer } from "components/Layout";

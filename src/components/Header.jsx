@@ -87,6 +87,7 @@ const HeaderLinks = styled(Nav)`
         }
 
         &:hover {
+            color: white;
             &:after {
                 background: white;
                 transition: 100ms ease-in-out background;

@@ -18,7 +18,8 @@ const AboutBio = styled("div")`
     padding-bottom: 3em;
     max-width: 480px;
     margin-right: 2em;
-    flex-basis: 40%;
+    flex-basis: 50%;
+    font-size: 20px;
 
     @media(max-width:${dimensions.maxwidthMobile}px) {
         flex-basis: 100%;
@@ -48,7 +49,7 @@ const AboutContent = styled("div")`
     padding-top: 1em;
     padding-bottom: 3em;
     width: 100%;
-    flex-basis: 40%;
+    flex-basis: 50%;
 
     @media(max-width:${dimensions.maxwidthMobile}px) {
         flex-basis: 100%;
@@ -66,7 +67,9 @@ const Do = ({ title, bio }) => (
         <AboutContainer>
             <AboutContent>
                 <AboutBio>
-                We teach underrepresented high school and middle school students in the Troy, NY area coding through various regular and one-day events. Some of our offerings include the STEP program, where we offer weekly lessons at RPI in a different coding language each semester to students in the area, the Troy High School program, where we travel to Troy High School to teach students coding, and Launchpad, our annual hackathon for local high school students hosted at RPI.
+                Through our various programs, we reach local middle school and high school students in the Capital district. 
+                Our programs combine introductory coding lessons with the problem solving skills required for academic and professional
+                success in the 21st century. All of our programs are completely free of charge for our participants. 
                 </AboutBio>
                 <DoPicture>
                     <img src={l2} />

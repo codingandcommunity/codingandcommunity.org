@@ -4,7 +4,6 @@ import MyHelmet from "components/MyHelmet";
 import { graphql, Link } from "gatsby";
 import styled from "@emotion/styled";
 import colors from "styles/colors";
-import dimensions from "styles/dimensions";
 import Hero from "components/index/Hero";
 import About from "components/index/About";
 import Do from "components/index/Do";
@@ -15,7 +14,6 @@ import ProgramCard from "components/programs/ProgramCard";
 import { LayoutContainer } from "../components/Layout";
 
 const Section = styled("div")`
-    min-height: 100vh;
     padding-top: 2em;
     display: flex;
     flex-direction: column;
