@@ -12,6 +12,26 @@ import l4 from 'images/l4.jpg';
 const RegisterSection = styled('div')`
     text-align: center;
     margin-top: 4rem;
+
+    font-size: 22px;
+    color: ${colors.darkgrey};
+
+
+    .links {
+        strong {
+            color: ${colors.visorblue};
+            font-weight: 500;
+        }
+
+        font-size: 22px;
+        margin-top: 2rem;
+
+        a {
+            font-size: 18px;
+            color: ${colors.visorblue};
+            padding: 1rem;
+        }
+    }
 `;
 
 const Desc = styled('p')`
@@ -95,6 +115,13 @@ const Register = () => (
                 </Button>
             </a>
         </RegisterButton>
+        <div class="links">
+            <strong>Register before March 1st to get a free Launchpad T-Shirt!</strong> 
+            <p>All participants below the age of 18 must also bring a signed parental release form.</p>
+            <a href="https://drive.google.com/file/d/1atUO-JbYiLiEFqnUVC2UpdzRhjrqkjQh/view?usp=sharing">Flier</a>
+            &#8226;
+            <a href="https://drive.google.com/file/d/1LZMXqfkZCXC3h243mFK4yAGnsJ1kItp4/view?usp=sharing">Parental Release Form</a>
+        </div>
         <Images>
            <img src={l1}/> 
            <img src={l3}/> 
