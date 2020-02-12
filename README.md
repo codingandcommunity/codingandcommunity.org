@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/4406b3c6-132a-4afd-8b70-4a5569299848/deploy-status)](https://app.netlify.com/sites/thirsty-babbage-a36a80/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e990c062-a28f-4357-905a-8c4e512bdeb2/deploy-status)](https://app.netlify.com/sites/nervous-lamarr-8c9454/deploys)
 
 # Prist | A Gatsby & Prismic Starter
 
