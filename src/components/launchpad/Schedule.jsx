@@ -53,6 +53,7 @@ const ScheduleTable = styled('div')`
     td{
         color: ${colors.darkgrey};
         font-size: 1.1rem;
+        padding: 0.5rem;
 
         :not(:last-child) {
             border-right: 2px ${colors.orangeloop} solid;
@@ -67,9 +68,8 @@ const ScheduleTable = styled('div')`
 const Schedule = () => (
     <ScheduleSection>
         <Header title='Schedule' />
-        <h3>Schedule to be announced soon!</h3>
         <p>Remember, you don't have to come both days.</p>
-        {/*<Days>
+        <Days>
             <ScheduleTable>
                 <h3>March 21st</h3>
                 <table>
@@ -84,10 +84,98 @@ const Schedule = () => (
                         </tr>
                         <tr>
                             <td>
-                                Hello
+                                9:00 am
                             </td>
                             <td>
-                            World 
+                                Welcome & Breakfast
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                9:20 am
+                            </td>
+                            <td>
+                                Team-making and brainstorming
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:00 am
+                            </td>
+                            <td>
+                                Beginner website development workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:00 am
+                            </td>
+                            <td>
+                                Beginner app development workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                11:00 am
+                            </td>
+                            <td>
+                                API workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:00 pm
+                            </td>
+                            <td>
+                                Lunch
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                1:00 pm
+                            </td>
+                            <td>
+                                Data science workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2:00 pm
+                            </td>
+                            <td>
+                                Arduino workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2:00 pm
+                            </td>
+                            <td>
+                                Git workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3:00 pm
+                            </td>
+                            <td>
+                                Break activity
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3:30 pm
+                            </td>
+                            <td>
+                                Advanced website development workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                5:00 pm
+                            </td>
+                            <td>
+                                Closing
                             </td>
                         </tr>
                     </tbody>
@@ -107,18 +195,74 @@ const Schedule = () => (
                         </tr>
                         <tr>
                             <td>
-                                Hello
+                                9:00 am
                             </td>
                             <td>
-                            World 
+                                Startup and breakfast
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                Hello
+                                9:15 am
                             </td>
                             <td>
-                            World 
+                                Continue hacking
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                9:15 am
+                            </td>
+                            <td>
+                                Continue hacking
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                11:00 am
+                            </td>
+                            <td>
+                                Pitching workshop
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:00 pm
+                            </td>
+                            <td>
+                                Lunch
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:00 pm
+                            </td>
+                            <td>
+                                Lunch
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2:30 pm
+                            </td>
+                            <td>
+                                Guest speaker
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3:30 pm
+                            </td>
+                            <td>
+                                Judging
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                4:30 pm
+                            </td>
+                            <td>
+                                Closing & awards
                             </td>
                         </tr>
                     </tbody>
@@ -126,7 +270,6 @@ const Schedule = () => (
             </ScheduleTable>
         </Days>
         <p>All workshops are optional. Balance them with work time!</p>
-        */}
     </ScheduleSection>
 );
 
