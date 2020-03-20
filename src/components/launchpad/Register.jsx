@@ -45,6 +45,10 @@ const Desc = styled('p')`
     a {
         color: ${colors.visorblue};
     }
+
+    h4 {
+        color: red;
+    }
 `;
 
 const RegisterButton = styled('div')`
@@ -107,10 +111,11 @@ const Register = () => (
         </Values>
         <Desc>
             <strong>Launchpad</strong> is a hackathon for local high school students hosted at RPI by <a href='/'>coding&&community</a>. Students will have the opportunity to work together to brainstorm, design, and code a project from scratch. We're excited to see your creativity unleashed!   
+            <h4>Due to the ongoing COVID-19 outbreak, Launchpad is postponed to September 26th - 27th</h4>
         </Desc>
         <RegisterButton>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdB6QAV0WeLeQy4YUM6fM3YG4EtYHU5MX3MWYStHaHbf9dmIQ/viewform">
-                <Button>
+                <Button disabled>
                     Register Now 🚀
                 </Button>
             </a>
