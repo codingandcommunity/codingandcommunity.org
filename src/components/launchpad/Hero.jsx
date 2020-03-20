@@ -10,7 +10,7 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import LaunchpadLogo from "components/launchpad/LaunchpadLogo";
 import HeroImage from "images/launchpadhero3.jpg";
 
-var countDownDate = new Date("Mar 21, 2020 09:00:00").getTime();
+var countDownDate = new Date("Sep 26, 2020 09:00:00").getTime();
 
 // Update the count down every 1 second
 var interval = setInterval(function() {
@@ -188,7 +188,7 @@ const Hero = ({home}) => (
         <HeroLayoutContainer styles={{"margin-top": 0}}>
             <HeroContent>
                 <LaunchpadLogo />
-                <h2>March 21st-22nd, 2020</h2>
+                <h2>September 26th-27th, 2020</h2>
                 <h1 id='launchpad-countdown'></h1>
             </HeroContent>
             <Arrow color="#fff" scale="3" />
