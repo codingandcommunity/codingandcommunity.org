@@ -111,21 +111,18 @@ const Register = () => (
         </Values>
         <Desc>
             <strong>Launchpad</strong> is a hackathon for local high school students hosted at RPI by <a href='/'>coding&&community</a>. Students will have the opportunity to work together to brainstorm, design, and code a project from scratch. We're excited to see your creativity unleashed!   
-            <h4>Due to the ongoing COVID-19 outbreak, Launchpad is postponed to September 26th - 27th</h4>
         </Desc>
         <RegisterButton>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLSdB6QAV0WeLeQy4YUM6fM3YG4EtYHU5MX3MWYStHaHbf9dmIQ/viewform">
-                <Button disabled>
+                <Button>
                     Register Now 🚀
                 </Button>
             </a>
         </RegisterButton>
         <div class="links">
-            <strong>Register before March 1st to get a free Launchpad T-Shirt!</strong> 
-            <p>All participants below the age of 18 must also bring a signed parental release form.</p>
+            <strong>Register before October 1st to get a free Launchpad T-Shirt!</strong> 
             <a href="https://drive.google.com/file/d/1atUO-JbYiLiEFqnUVC2UpdzRhjrqkjQh/view?usp=sharing">Flier</a>
             &#8226;
-            <a href="https://drive.google.com/file/d/1LZMXqfkZCXC3h243mFK4yAGnsJ1kItp4/view?usp=sharing">Parental Release Form</a>
         </div>
         <Images>
            <img src={l1}/> 
