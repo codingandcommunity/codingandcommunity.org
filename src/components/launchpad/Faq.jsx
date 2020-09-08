@@ -53,11 +53,11 @@ const Faq = () => (
             </div>
             <div>
                 <h3>Do I need to attend for the entire weekend?</h3>
-                <p>You can attend the event for the entire weekend or either day. To be considered for prizes you must be present Sunday afternoon for judging. Also, for safety reasons we ask that students do not leave the Alumni House during the day unsupervised by a parent.</p>
+                <p>You can attend the event for the entire weekend or either day. To be considered for prizes you must be present Sunday afternoon for judging.</p>
             </div>
             <div>
-                <h3>Do I need to bring a computer?</h3>
-                <p>If you own your own laptop, we encourage you to use your own. If you don't own a laptop, we can provide one for you to use during the day.</p>
+                <h3>Do I need to have my own computer?</h3>
+                <p>The event will be online, so hackers will have to provide their own computers.</p>
             </div>
             <div>
                 <h3>Do I need to have any software installed?</h3>
@@ -65,23 +65,7 @@ const Faq = () => (
             </div>
             <div>
                 <h3>Does Launchpad cost money?</h3>
-                <p>Not at all! We will take care of all meals, goodies and prizes. However, we won't be able to provide transportation to the event.</p>
-            </div>
-            <div>
-                <h3>Where can I park?</h3>
-                <p>There is a parking lot right outside of the Alumni House.</p>
-            </div>
-            <div>
-                <h3>What should I bring?</h3>
-                <p>You should bring a laptop, charger, and a signed parent release form. We will take care of food, and any other materials needed.</p>
-            </div>
-            <div>
-                <h3>What is there to eat?</h3>
-                <p>We will provide breakfast and lunch both days. Please let us know of any allergy accomodations or dietary restrictions when you register.</p>
-            </div>
-            <div>
-                <h3>Are parents and teachers welcome?</h3>
-                <p>Of course! Your parents will love to see your projects! And, Saturday morning we will be offering a professional development forum for current and prospective CS teachers.</p>
+                <p>Not at all!</p>
             </div>
         </FaqContent>
     </FaqSection>
