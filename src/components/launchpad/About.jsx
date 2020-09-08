@@ -27,9 +27,9 @@ const About = () => (
     <AboutSection>
         <Header title='About' />
         <div>
-            <p><strong>When:</strong> March 21st - 22nd</p>
-            <p><strong>Where:</strong> Heffner Alumni House, 1301 Peoples Ave, Troy, NY</p>
-            <p><strong>Who:</strong> Grades 8-12</p>
+            <p><strong>When:</strong> October 10th - 11th </p>
+            <p><strong>Where:</strong> Online </p>
+            <p><strong>Who:</strong> Grades 6-12</p>
         </div>
         <hr></hr>
         <p id='desc'><strong>Launchpad</strong> is open to coders of all skill levels. Mentors from RPI will be around to help brainstorm, give advice, and teach mini tech-talks about topics that might be useful to your project. At the end of the day, all teams are encouraged to present their work, with a chance to win some prizes!</p>

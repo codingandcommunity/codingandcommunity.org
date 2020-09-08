@@ -71,7 +71,7 @@ const Schedule = () => (
         <p>Remember, you don't have to come both days.</p>
         <Days>
             <ScheduleTable>
-                <h3>March 21st</h3>
+                <h3>October 10th</h3>
                 <table>
                     <tbody>
                         <tr>
@@ -87,87 +87,7 @@ const Schedule = () => (
                                 9:00 am
                             </td>
                             <td>
-                                Welcome & Breakfast
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                9:20 am
-                            </td>
-                            <td>
-                                Team-making and brainstorming
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                10:00 am
-                            </td>
-                            <td>
-                                Beginner website development workshop
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                10:00 am
-                            </td>
-                            <td>
-                                Beginner app development workshop
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                11:00 am
-                            </td>
-                            <td>
-                                API workshop
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                12:00 pm
-                            </td>
-                            <td>
-                                Lunch
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                1:00 pm
-                            </td>
-                            <td>
-                                Data science workshop
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                2:00 pm
-                            </td>
-                            <td>
-                                Arduino workshop
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                2:00 pm
-                            </td>
-                            <td>
-                                Git workshop
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3:00 pm
-                            </td>
-                            <td>
-                                Break activity
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3:30 pm
-                            </td>
-                            <td>
-                                Advanced website development workshop
+                                Get Started
                             </td>
                         </tr>
                         <tr>
@@ -182,7 +102,7 @@ const Schedule = () => (
                 </table>
             </ScheduleTable>
             <ScheduleTable>
-                <h3>March 22nd</h3>
+                <h3>October 11th</h3>
                 <table>
                     <tbody>
                         <tr>
@@ -198,71 +118,15 @@ const Schedule = () => (
                                 9:00 am
                             </td>
                             <td>
-                                Startup and breakfast
+                                Resume Hacking
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                9:15 am
+                                4:00 pm
                             </td>
                             <td>
-                                Continue hacking
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                9:15 am
-                            </td>
-                            <td>
-                                Continue hacking
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                11:00 am
-                            </td>
-                            <td>
-                                Pitching workshop
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                12:00 pm
-                            </td>
-                            <td>
-                                Lunch
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                12:00 pm
-                            </td>
-                            <td>
-                                Lunch
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                2:30 pm
-                            </td>
-                            <td>
-                                Guest speaker
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3:30 pm
-                            </td>
-                            <td>
-                                Judging
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                4:30 pm
-                            </td>
-                            <td>
-                                Closing & awards
+                                Project Submission Deadline
                             </td>
                         </tr>
                     </tbody>
