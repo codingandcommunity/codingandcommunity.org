@@ -89,6 +89,7 @@ const Schedule = () => (
                             <td>
                                 Get Started
                             </td>
+                        </tr>
                         <tr>
                             <td>
                                 5:00 pm
