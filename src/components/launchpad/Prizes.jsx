@@ -45,10 +45,6 @@ const Prize = () => (
                 <p>Show off your HTML, CSS, and JavaScript skills, and make a dazzling website!</p>
             </div>
             <div>
-                <h3>Best Hardware Hack</h3>
-                <p>There's more to tech than just writing code on a screen. Use an Arduino or Raspberry PI to build the best hardware hack</p>
-            </div>
-            <div>
                 <h3>Best Game</h3>
                 <p>Whether its a platformer or a top down game, design and implement the best game possible.</p>
             </div>
