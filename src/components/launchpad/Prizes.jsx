@@ -56,10 +56,10 @@ const Prize = () => (
                 <h3>Bootstrap Award</h3>
                 <p>This award is given to a team that shows perseverence and learns new skills while tackling a difficult challenge.</p>
             </div>
-            <div>
-                <h3>Scavenger Hunt Award</h3>
-                <p>This award recognizes whoever scores the most points in our scavenger hunt challenge.</p>
-            </div>
+        </PrizeContent>
+        <Header title='Scavenger Hunt Challenge' />
+        <PrizeContent>
+            <p>New this year, we will have a collection of programming problems of varying difficulty. Teams or individuals can earn points by solving them. Whoever scores the most points will win the Scavenger Hunt Award.</p>
         </PrizeContent>
     </PrizeSection>
 );
