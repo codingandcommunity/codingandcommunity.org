@@ -87,7 +87,55 @@ const Schedule = () => (
                                 9:00 am
                             </td>
                             <td>
-                                Get Started
+                                Intro, Form Teams
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                9:30 am
+                            </td>
+                            <td>
+                                Start Hacking!
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:00 am
+                            </td>
+                            <td>
+                                Workshop: Python in 60 minutes or less
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                11:30 am
+                            </td>
+                            <td>
+                                Workshop: Basic Web Development
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:00 pm
+                            </td>
+                            <td>
+                                Lunch break
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                1:00 pm
+                            </td>
+                            <td>
+                                Workshop: Art with Computer Science
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2:30 pm
+                            </td>
+                            <td>
+                                Workshop: Version Control with Git
                             </td>
                         </tr>
                         <tr>
@@ -123,10 +171,58 @@ const Schedule = () => (
                         </tr>
                         <tr>
                             <td>
+                                09:30 am
+                            </td>
+                            <td>
+                                Workshop: Web APIs
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                10:30 am
+                            </td>
+                            <td>
+                                Workshop: Cryptography
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                12:00 pm
+                            </td>
+                            <td>
+                                Lunch break
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                1:00 pm
+                            </td>
+                            <td>
+                                Workshop: Pitching
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                2:00 pm
+                            </td>
+                            <td>
+                                Guest Speaker
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                3:00 pm
+                            </td>
+                            <td>
+                                Project Pitches, Judging
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
                                 4:00 pm
                             </td>
                             <td>
-                                Project Submission Deadline
+                                Awards Presentation, Wrap-up!
                             </td>
                         </tr>
                     </tbody>
