@@ -121,7 +121,7 @@ const Register = () => (
         </RegisterButton>
         <div class="links">
             <strong>Register before October 1st to get a free Launchpad T-Shirt!</strong> 
-            <a href="https://drive.google.com/file/d/1atUO-JbYiLiEFqnUVC2UpdzRhjrqkjQh/view?usp=sharing">Flier</a>
+            <a href="https://drive.google.com/file/d/1zaGEmWlwjnwQka4KdH67v2kwZPE18xsd/view?usp=sharing">Flier</a>
             &#8226;
         </div>
         <Images>
