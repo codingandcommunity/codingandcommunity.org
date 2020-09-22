@@ -119,6 +119,13 @@ const Register = () => (
                 </Button>
             </a>
         </RegisterButton>
+        <RegisterButton>
+            <a href="https://www.discord.gg/rvaxUDq">
+                <Button>
+                    Join us on Discord!
+                </Button>
+            </a>
+        </RegisterButton>
         <div class="links">
             <strong>Register before October 1st to get a free Launchpad T-Shirt!</strong> 
             <a href="https://drive.google.com/file/d/1zaGEmWlwjnwQka4KdH67v2kwZPE18xsd/view?usp=sharing">Flier</a>
