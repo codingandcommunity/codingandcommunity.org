@@ -44,9 +44,6 @@ const WorkshopContent = styled('div')`
 const Workshop = () => (
     <WorkshopSection>
         <Header title='Workshops' />
-        <h3>
-            Workshops to be announced soon!
-        </h3>
         <WorkshopContent>
             <div>
                 <h3>Python in 60 minutes or less</h3>
