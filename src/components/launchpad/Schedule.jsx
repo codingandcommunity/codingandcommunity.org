@@ -174,7 +174,7 @@ const Schedule = () => (
                                 09:30 am
                             </td>
                             <td>
-                                Workshop: Web APIs
+                                Workshop: Cryptography
                             </td>
                         </tr>
                         <tr>
@@ -182,7 +182,7 @@ const Schedule = () => (
                                 10:30 am
                             </td>
                             <td>
-                                Workshop: Cryptography
+                                Workshop: Web APIs
                             </td>
                         </tr>
                         <tr>
