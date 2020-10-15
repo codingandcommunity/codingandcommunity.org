@@ -13,9 +13,13 @@ import HeroImage from "images/launchpadhero3.jpg";
 var countDownDate = new Date("Oct 10, 2020 09:00:00").getTime();
 
 // Update the count down every 1 second
+/*
+@ whoever updates this in the future: uncomment the interval variable
+and change countDownDate above to get the coutndown timer working again.
 var interval = setInterval(function() {
 
     if (window.location.pathname == '/launchpad' || window.location.pathname == '/launchpad/') {
+        
         // Get today's date and time
         var now = new Date().getTime();
 
@@ -38,6 +42,7 @@ var interval = setInterval(function() {
         }
     }
 }, 1000);
+*/
 
 const fadeIn = keyframes`
     0% {
@@ -188,7 +193,7 @@ const Hero = ({home}) => (
         <HeroLayoutContainer styles={{"margin-top": 0}}>
             <HeroContent>
                 <LaunchpadLogo />
-                <h2>October 10th-11th, 2020</h2>
+                <h2>Thank you to all the hackers! We hope to see you again next year!</h2>
                 <h1 id='launchpad-countdown'></h1>
             </HeroContent>
             <Arrow color="#fff" scale="3" />
