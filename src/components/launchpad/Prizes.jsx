@@ -42,11 +42,11 @@ const Prize = () => (
         <PrizeContent>
             <div>
                 <h3>Best Game 🏆</h3>
-                <p><strong>Team True</strong> for their platformer <i>Reflection</i>, which required players to turn platforms on and off to finish the level.</p>
+                <p><strong>Team True</strong> for their platformer <i>Contrast</i>, which required players to turn platforms on and off to finish the level.</p>
             </div>
             <div>
                 <h3>Bootstrap Award 🏆</h3>
-                <p><strong>Lunch Lunch</strong> for designing custom sprites, backgrounds, and music in <i>Untitled Sidescroller</i>.</p>
+                <p><strong>LunchLunch</strong> for designing custom sprites, backgrounds, and music in <i>Untitled Sidescroller</i>.</p>
             </div>
             <div>
                 <h3>Scavenger Hunt Award 🏆</h3>
