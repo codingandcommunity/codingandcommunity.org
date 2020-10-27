@@ -131,6 +131,13 @@ const Header = () => {
             <NavItem>
                 <Link
                     activeClassName="Link--is-active"
+                    to="/curricula">
+                    Curricula
+                </Link>
+            </NavItem>
+            <NavItem>
+                <Link
+                    activeClassName="Link--is-active"
                     to="/work">
                     Work With Us
                 </Link>
