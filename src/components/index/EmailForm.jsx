@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from "@emotion/styled";
 import colors from "styles/colors";
+import dimensions from "styles/dimensions";
 import MailchimpSubscribe from "react-mailchimp-subscribe"
 
 const url = "https://codingandcommunity.us20.list-manage.com/subscribe/post?u=c3479d45e439f6a6cd82a3cd9&amp;id=5b90f79e76"
@@ -15,10 +16,12 @@ const EmailForm = styled('form')`
 
   font-family: -apple-system, Helvetica, Arial, sans-serif;
   padding: 2rem;
+  
 
   h2 {
     margin-top: 0;
     margin-bottom: 1rem;
+    width:${dimensions.maxwidthTablet}px; 
   }
 
   .Wrapper {
@@ -57,12 +60,13 @@ const EmailForm = styled('form')`
 `
 
 const CustomForm = ({ status, message, onvalidated }) => {
-  let email, fname, lname;
+  let email, fname, lname, fakeinput;
   const submit = (e) => {
     e.preventDefault();
     email &&
     fname &&
     lname &&
+    (fakeinput.value === "") &&
     email.value.indexOf('@') > -1 &&
     onvalidated({
       EMAIL: email.value,
@@ -73,8 +77,9 @@ const CustomForm = ({ status, message, onvalidated }) => {
 
   return (
     <EmailForm>
-      <h2>Join our mailing list! No spam, just more to learn about code.</h2>
-      
+      <h2>Join our mailing list</h2>
+      <p>Stay in the know on classes, events, and more!</p>
+
       {status === "sending" && <div style={{ color: "blue" }}>Sending...</div>}
       {status === "error" && <div style={{ color: "blue" }}>Something went wrong :( ({message})</div>}
       {status === "success" && <div style={{ color: "blue" }}>Success!</div>}
@@ -82,6 +87,10 @@ const CustomForm = ({ status, message, onvalidated }) => {
       <input ref={node => (fname = node)} type='text' placeholder='First Name'/>
       <input ref={node => (lname = node)} type='text' placeholder='Last Name'/>
       <input ref={node => (email = node)} type='email' placeholder='Your Email'/>
+      <div aria-hidden="true">
+        {/* spam protection; this field should not be filled out */}
+        <input ref={node => (fakeinput = node)} type='hidden' placeholder=''/> 
+      </div>
       <button onClick={submit}>
         Submit
       </button>
