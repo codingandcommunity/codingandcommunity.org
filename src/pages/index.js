@@ -11,6 +11,7 @@ import ReadMoreAction from "components/_ui/ReadMoreAction";
 import Title from "components/_ui/Title";
 import Layout from "components/Layout";
 import ProgramCard from "components/programs/ProgramCard";
+import EmailListForm from "components/index/EmailForm"
 import { LayoutContainer } from "../components/Layout";
 
 const Section = styled("div")`
@@ -63,6 +64,11 @@ const RenderBody = ({ home, programs, meta, background }) => (
                         />
                     ))}
                     <ReadMoreAction action='Read more about our community impact' to='/programs' />
+                </LayoutContainer>
+            </Section>
+            <Section>
+                <LayoutContainer>
+                    <EmailListForm/>
                 </LayoutContainer>
             </Section>
     </>
