@@ -68,6 +68,9 @@ const Layout = ({ children }) => (
                     style {
                         url
                     }
+                    replit {
+                        url
+                    }
                 }
             }
         `}
