@@ -4,15 +4,17 @@ import styled from "@emotion/styled";
 import colors from "styles/colors";
 import dimensions from "styles/dimensions";
 import OutlineLogo from "components/_ui/OutlineLogo";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faFacebookF,
-  faInstagram,
-  faLinkedin,
-  faTwitter,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons"
+import { 
+    Facebook, 
+    Github, 
+    Twitter, 
+    Instagram, 
+    Linkedin, 
+    ReplDotIt 
+} from '@icons-pack/react-simple-icons';
 
+/** @jsx jsx */
+import { jsx, css } from '@emotion/react'
 
 const FooterContainer = styled("div")`
     padding-top: 2em;
@@ -114,20 +116,18 @@ const Social = styled("div")`
     }
 `
 
-const SocialInfo = ({ info, icon }) => {
-    return (
-        <a href={info.url}>
-            <SocialLogo icon={icon} />
-        </a>
-    )
-}
+const SocialInfo = props => (
+    <a href={props.info.url}>
+        { props.children }
+    </a>
+)
 
-const SocialLogo = styled(FontAwesomeIcon)`
+const brandIcon = css`
     color: white;
     max-width: 14px;
     transition: color 0.3s;
     &:hover {
-        color: ${colors.bitblue};
+        color: blue;
     }
 `
 
@@ -141,7 +141,7 @@ const FooterAuthor = styled("a")`
     }
 `
 
-const Footer = ({email, facebook, instagram, linkedin, twitter, github, chapter, constitution, style, swag}) => (
+const Footer = ({email, facebook, instagram, linkedin, twitter, github, replit, chapter, constitution, style, swag}) => (
     <FooterContainer>
         <FooterContent>
             <FooterLogo>
@@ -171,11 +171,12 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github, chapter,
                     <h5>Contact</h5>
                     <FooterLinkExternal href={'mailto:' + email}>{email}</FooterLinkExternal>
                     <Social>
-                        <SocialInfo info={facebook} icon={faFacebookF} />
-                        <SocialInfo info={instagram} icon={faInstagram} />
-                        <SocialInfo info={linkedin} icon={faLinkedin} />
-                        <SocialInfo info={twitter} icon={faTwitter} />
-                        <SocialInfo info={github} icon={faGithub} />
+                        <SocialInfo info={facebook}><Facebook css={brandIcon}/></SocialInfo>
+                        <SocialInfo info={instagram}><Instagram css={brandIcon}/></SocialInfo>
+                        <SocialInfo info={twitter}><Twitter css={brandIcon}/></SocialInfo>
+                        <SocialInfo info={github}><Github css={brandIcon}/></SocialInfo>
+                        <SocialInfo info={linkedin}><Linkedin css={brandIcon}/></SocialInfo>
+                        <SocialInfo info={replit}><ReplDotIt css={brandIcon}/></SocialInfo>
                     </Social>
                 </InfoColumn>
             </FooterInfo>

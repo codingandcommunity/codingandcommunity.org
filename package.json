@@ -6,11 +6,13 @@
   "author": "Marguerite Roth | marguerite.io | marguerite.roth@gmail.com",
   "dependencies": {
     "@emotion/core": "^10.0.10",
+    "@emotion/react": "^11.1.5",
     "@emotion/styled": "^10.0.12",
     "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.12.0",
     "@fortawesome/free-solid-svg-icons": "^5.12.0",
     "@fortawesome/react-fontawesome": "^0.1.8",
+    "@icons-pack/react-simple-icons": "^4.0.0",
     "bootstrap": "^4.4.1",
     "gatsby": "^2.12.0",
     "gatsby-background-image": "^0.9.12",
