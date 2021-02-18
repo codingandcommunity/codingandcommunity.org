@@ -162,7 +162,7 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github, replit, 
                 </InfoColumn>
                 <InfoColumn>
                     <h5>Resources</h5>
-                    <FooterLink to={chapter.url}>Start a </FooterLink>
+                    <FooterLink to={chapter.url}>Start a Chapter</FooterLink>
                     <FooterLinkExternal href={constitution.url}>Constitution</FooterLinkExternal>
                     <FooterLinkExternal href={swag.url}>Swag</FooterLinkExternal>
                     <FooterLinkExternal href={style.url}>Style Guide</FooterLinkExternal>
