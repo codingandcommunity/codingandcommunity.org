@@ -18,11 +18,11 @@ const Work = ({ curricula, meta }) => (
                     {curricula.map((curriculum, i) => (
                         <CurriculumCard
                             key={i}
-                            category={curriculum.node.curriculum_title}
-                            title={curriculum.node.curriculum_description}
-                            description={curriculum.node.curriculum_thumbnail}
+                            category={curriculum.node.curriculum_category}
+                            title={curriculum.node.curriculum_title}
+                            description={curriculum.node.curriculum_description}
+                            thumbnail={curriculum.node.curriculum_thumbnail}
                             url={curriculum.node.curriculum_link}
-                            uid={curriculum.node._meta.uid}
                         />
                     ))}
                 </>

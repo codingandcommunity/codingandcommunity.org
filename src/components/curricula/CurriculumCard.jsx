@@ -162,12 +162,12 @@ const CurriculumCardImageContainer = styled("div")`
     }
 `
 
-const CurriculumCard = ({ category, title, description, url, uid}) => (
+const CurriculumCard = ({ key, category, title, description, thumbnail, url}) => (
     <a target="_blank" href={url.url}>
     <CurriculumCardContainer>
         <CurriculumCardContent className="ProjectCardContent">
             <CurriculumCardCategory>
-                {category[0].text}
+                Class
             </CurriculumCardCategory>
             <CurriculumCardTitle>
                 {title[0].text}
@@ -180,7 +180,7 @@ const CurriculumCard = ({ category, title, description, url, uid}) => (
             </CurriculumCardAction>
         </CurriculumCardContent>
         <CurriculumCardImageContainer className="ProjectCardImageContainer">
-            {/* <img src={thumbnail.url} alt={title[0].text}/> */}
+            <img src={thumbnail.url} alt={title[0].text}/>
         </CurriculumCardImageContainer>
     </CurriculumCardContainer>
     </a>
