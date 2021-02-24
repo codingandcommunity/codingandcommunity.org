@@ -6,7 +6,7 @@ import dimensions from "styles/dimensions";
 import colors from "styles/colors";
 import PropTypes from "prop-types";
 
-const CurriculumCardContainer = styled(Link)`
+const CurriculumCardContainer = styled("div")`
     display: grid;
     grid-template-columns: 4fr 7fr;
     box-shadow: 0px 9px 24px rgba(0, 0, 0, 0.2);
@@ -163,7 +163,8 @@ const CurriculumCardImageContainer = styled("div")`
 `
 
 const CurriculumCard = ({ category, title, description, url, uid}) => (
-    <CurriculumCardContainer to={url.url}>
+    <a href={url.url}>
+    <CurriculumCardContainer>
         <CurriculumCardContent className="ProjectCardContent">
             <CurriculumCardCategory>
                 {category[0].text}
@@ -182,6 +183,7 @@ const CurriculumCard = ({ category, title, description, url, uid}) => (
             {/* <img src={thumbnail.url} alt={title[0].text}/> */}
         </CurriculumCardImageContainer>
     </CurriculumCardContainer>
+    </a>
 )
 
 export default CurriculumCard;
