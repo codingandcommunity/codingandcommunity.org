@@ -162,8 +162,8 @@ const CurriculumCardImageContainer = styled("div")`
     }
 `
 
-const CurriculumCard = ({ category, title, description, thumbnail, uid}) => (
-    <CurriculumCardContainer to={`/curricula/${uid}`}>
+const CurriculumCard = ({ category, title, description, url, uid}) => (
+    <CurriculumCardContainer to={url.url}>
         <CurriculumCardContent className="ProjectCardContent">
             <CurriculumCardCategory>
                 {category[0].text}
@@ -179,7 +179,7 @@ const CurriculumCard = ({ category, title, description, thumbnail, uid}) => (
             </CurriculumCardAction>
         </CurriculumCardContent>
         <CurriculumCardImageContainer className="ProjectCardImageContainer">
-            <img src={thumbnail.url} alt={title[0].text}/>
+            {/* <img src={thumbnail.url} alt={title[0].text}/> */}
         </CurriculumCardImageContainer>
     </CurriculumCardContainer>
 )

@@ -21,7 +21,7 @@ const Work = ({ curricula, meta }) => (
                             category={curriculum.node.curriculum_title}
                             title={curriculum.node.curriculum_description}
                             description={curriculum.node.curriculum_thumbnail}
-                            thumbnail={curriculum.node.curriculum_link}
+                            url={curriculum.node.curriculum_link}
                             uid={curriculum.node._meta.uid}
                         />
                     ))}
@@ -54,7 +54,12 @@ export const query = graphql`
                         curriculum_title
                         curriculum_description
                         curriculum_thumbnail
-                        curriculum_link
+                        curriculum_link {
+                            __typename
+                            ... on PRISMIC__ExternalLink {
+                                url
+                            }
+                        }
                         _meta {
                             uid
                         }
