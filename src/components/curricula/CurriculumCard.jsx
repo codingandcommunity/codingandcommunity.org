@@ -163,7 +163,7 @@ const CurriculumCardImageContainer = styled("div")`
 `
 
 const CurriculumCard = ({ category, title, description, url, uid}) => (
-    <a href={url.url}>
+    <a target="_blank" href={url.url}>
     <CurriculumCardContainer>
         <CurriculumCardContent className="ProjectCardContent">
             <CurriculumCardCategory>
