@@ -13,10 +13,9 @@ const Work = ({ curricula, meta }) => (
         <MyHelmet meta={meta} />
         <Layout>
             <LayoutContainer>
-                <Title title='Curricula' text='Curricula coming soon! Check back later :)' color={colors.visorblue} />
+                <Title title='Curricula' text='All materials are free for use.' color={colors.visorblue} />
                 <>
-                    {/* Uncomment this block to show curriculum blocks */}
-                    {/* {curricula.map((curriculum, i) => (
+                    {curricula.map((curriculum, i) => (
                         <CurriculumCard
                             key={i}
                             category={curriculum.node.curriculum_category}
@@ -25,8 +24,8 @@ const Work = ({ curricula, meta }) => (
                             thumbnail={curriculum.node.curriculum_thumbnail}
                             url={curriculum.node.curriculum_link}
                         />
-                    ))} */}
-                </>
+                    ))}
+                </>                
             </LayoutContainer>
         </Layout>
     </>
