@@ -149,13 +149,14 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github, replit, 
                     <OutlineLogo />
                 </Link>
                 <FooterAuthor href='/'>
-                    © 2020 coding&&community 
+                    © 2021 coding&&community 
                 </FooterAuthor>
             </FooterLogo>
             <FooterInfo>
                 <InfoColumn>
                     <h5>Navigation</h5>
                     <FooterLink to="/programs">Programs</FooterLink>
+                    <FooterLink to="/curricula">Curricula</FooterLink>
                     <FooterLink to="/work">Work With Us</FooterLink>
                     <FooterLink to="/team">Team</FooterLink>
                     <FooterLink to="/blog">Blog</FooterLink>
