@@ -10,7 +10,7 @@ import {
     Twitter, 
     Instagram, 
     Linkedin, 
-    ReplDotIt 
+    ReplDotIt
 } from '@icons-pack/react-simple-icons';
 
 /** @jsx jsx */
@@ -149,7 +149,7 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github, replit, 
                     <OutlineLogo />
                 </Link>
                 <FooterAuthor href='/'>
-                    © 2020 coding&&community 
+                    © 2021 coding&&community 
                 </FooterAuthor>
             </FooterLogo>
             <FooterInfo>
