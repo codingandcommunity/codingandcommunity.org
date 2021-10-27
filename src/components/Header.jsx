@@ -114,13 +114,14 @@ const Header = () => {
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <HeaderLinks className="nav mr-auto navbar-right" navbar>
-            <NavItem>
+{/* Removing this until Launchpad comes back online
+                <NavItem>
                 <Link
                     activeClassName="Link--is-active"
                     to="/launchpad">
                     Launchpad 
                 </Link>
-            </NavItem>
+            </NavItem> */}
             <NavItem>
                 <Link
                     activeClassName="Link--is-active"
