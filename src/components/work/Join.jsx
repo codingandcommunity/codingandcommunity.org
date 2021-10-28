@@ -7,6 +7,7 @@ import ReadMoreAction from "components/_ui/ReadMoreAction";
 import Title from 'components/_ui/Title'
 import Button from 'components/_ui/Button'
 import conference from 'images/stepconference.jpg';
+import Discord from '@icons-pack/react-simple-icons'
 
 const JoinContainer = styled("div")`
     width: 100%;
@@ -116,15 +117,19 @@ const Join = ({ title, bio }) => (
             <p>Joining us is a great way for RPI students to be involved in the wider Troy community.</p>
             <Programs>
                 <Program>
-                    <h4>Instructor</h4>
+                    <h4>Join our Discord</h4>
                     <p>
-                    Work with us as an instructor for our STEP and Troy High School programs, and volunteer for our one day programs as well.
+                        Discord is our main collaboration platform. This includes information on upcoming events, work party discussions, and internal events like GBMs. To join, send us an email with your RIN, RCS ID, and Discord handle.
                     </p>
                 </Program>
                 <Program>
-                    <h4>Curriculum Design</h4>
+                    <h4>Come to Work Parties</h4>
                     <p>
-                    We pride ourselves on producing almost all of our curriculum in-house. This goes on to make our programs the best they can be. Or you can help us spread our material to CS teachers around the country!
+                        Work parties are where we come together to work on club operations. We hope to see you there!
+                    </p>
+                    <p>
+                        Tuesdays, 6pm in Union Mother's
+                        Wednesdays, 6pm in RU 3502
                     </p>
                 </Program>
                 <Program>
