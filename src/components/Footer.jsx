@@ -156,6 +156,7 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github, replit, 
                 <InfoColumn>
                     <h5>Navigation</h5>
                     <FooterLink to="/programs">Programs</FooterLink>
+                    <FooterLink to="/curricula">Curricula</FooterLink>
                     <FooterLink to="/work">Work With Us</FooterLink>
                     <FooterLink to="/team">Team</FooterLink>
                     <FooterLink to="/blog">Blog</FooterLink>
