@@ -45,16 +45,7 @@ const SpeakerContent = styled('div')`
 const Speaker = () => (
     <SpeakerSection>
         <Header title='Speaker' />
-        <SpeakerContent>
-            <img src={mark} alt='Mark Little'></img>
-            <div>
-                <h3>Mark Little</h3>
-                <h5>Founder of RiseHigh</h5>
-                <p>
-                After a long career as a GE executive that included directing the GE Global Research Center (GRC), Mark Little founded Rise High with the goal of exposing students to a variety of STEM concepts in the real world.
-                </p>
-            </div>
-        </SpeakerContent>
+        <h2>To be announced.</h2>
     </SpeakerSection>
 );
 
