@@ -1,7 +1,7 @@
 import React from "react";
 
 const LaunchpadLogo = () => (
-    <svg version="1.1"  x="0px" y="0px" viewBox="0 150 800 550" enable-background="new 0 0 800 550" height="400px"> 
+    <svg version="1.1"  x="0px" y="0px" viewBox="0 50 800 550" enable-background="new 0 0 800 550" height="400px"> 
     <g id="Layer_7">
     <g>
         <g>

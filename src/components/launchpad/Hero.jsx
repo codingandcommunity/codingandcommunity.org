@@ -190,10 +190,10 @@ const Arrow = ({ color, scale }) => {
 
 const Hero = ({home}) => (
     <Background background={HeroImage}>
-        <HeroLayoutContainer styles={{"margin-top": 0}}>
+        <HeroLayoutContainer styles={{"margin-top": "0"}}>
             <HeroContent>
                 <LaunchpadLogo />
-                <h1 id='launchpad-countdown'></h1>
+                <h1 id="launchpad-countdown"></h1>
             </HeroContent>
             <Arrow color="#fff" scale="3" />
         </HeroLayoutContainer>

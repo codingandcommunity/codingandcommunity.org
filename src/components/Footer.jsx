@@ -149,7 +149,7 @@ const Footer = ({email, facebook, instagram, linkedin, twitter, github, replit, 
                     <OutlineLogo />
                 </Link>
                 <FooterAuthor href='/'>
-                    © 2021 coding&&community 
+                    © 2022 coding&&community 
                 </FooterAuthor>
             </FooterLogo>
             <FooterInfo>

@@ -27,7 +27,7 @@ const About = () => (
     <AboutSection>
         <Header title='About' />
         <div>
-            <p><strong>When:</strong> Aprkl 2nd - 3rd </p>
+            <p><strong>When:</strong> April 2nd - 3rd </p>
             <p><strong>Where:</strong> Online </p>
             <p><strong>Who:</strong> Grades 8-12</p>
         </div>

@@ -38,7 +38,7 @@ const PrizeContent = styled('div')`
 
 const Prize = () => (
     <PrizeSection>
-        <Header title='Prize Winners' />
+        <Header title='Prizes' />
         <PrizeContent>
             {/*<div>
                 <h3>Best Game 🏆</h3>
@@ -67,14 +67,15 @@ const Prize = () => (
             </div>
             <div>
                 <h3>Bootstrap Award</h3>
-                <p>This award is given to a team that shows perseverence and learns new skills while tackling a difficult challenge.</p>
+                <p>This award is given to a team that shows perseverance and learns new skills while tackling a difficult challenge.</p>
             </div>
+            <div>
+                <h3>Scavenger Hunt Challenge</h3>
+                <p>Teams or individuals can earn points by solving a collection of coding puzzles. Whoever scores the most points will win the Scavenger Hunt Award.</p>
+            </div>
+
         </PrizeContent>
         
-        <Header title='Scavenger Hunt Challenge'/>
-        <PrizeContent>
-            <p>Teams or individuals can earn points by solving a collection of coding puzzles. Whoever scores the most points will win the Scavenger Hunt Award.</p>
-        </PrizeContent>
     </PrizeSection>
 );
 
