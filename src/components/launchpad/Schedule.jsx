@@ -68,11 +68,11 @@ const ScheduleTable = styled('div')`
 const Schedule = () => (
     <ScheduleSection>
         <Header title='Schedule' />
-        <h2>To be announced.</h2>
-        {/*
         <Days>
             <ScheduleTable>
-                <h3>October 10th</h3>
+            <div style={{textAlign: 'left'}}>
+                <h3>Saturday, April 2nd</h3>
+            </div> 
                 <table>
                     <tbody>
                         <tr>
@@ -88,7 +88,7 @@ const Schedule = () => (
                                 9:00 am
                             </td>
                             <td>
-                                Intro, Form Teams
+                                Welcome!
                             </td>
                         </tr>
                         <tr>
@@ -96,7 +96,15 @@ const Schedule = () => (
                                 9:30 am
                             </td>
                             <td>
-                                Start Hacking!
+                                Make teams and start brainstorming
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                9:45 am
+                            </td>
+                            <td>
+                                Scavenger hunt kickoff
                             </td>
                         </tr>
                         <tr>
@@ -104,23 +112,7 @@ const Schedule = () => (
                                 10:00 am
                             </td>
                             <td>
-                                Workshop: Python in 60 minutes or less
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                11:30 am
-                            </td>
-                            <td>
-                                Workshop: Basic Web Development
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                12:00 pm
-                            </td>
-                            <td>
-                                Lunch break
+                                Start hacking + Intro to Python workshop
                             </td>
                         </tr>
                         <tr>
@@ -128,15 +120,15 @@ const Schedule = () => (
                                 1:00 pm
                             </td>
                             <td>
-                                Workshop: Art with Computer Science
+                                Introductory workshops
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                2:30 pm
+                                3:00 pm
                             </td>
                             <td>
-                                Workshop: Version Control with Git
+                                Team building activity: Wikipedia game
                             </td>
                         </tr>
                         <tr>
@@ -151,7 +143,9 @@ const Schedule = () => (
                 </table>
             </ScheduleTable>
             <ScheduleTable>
-                <h3>October 11th</h3>
+                <div style={{textAlign: 'left'}}>
+                    <h3>Sunday, April 3rd</h3>
+                </div>
                 <table>
                     <tbody>
                         <tr>
@@ -167,55 +161,31 @@ const Schedule = () => (
                                 9:00 am
                             </td>
                             <td>
-                                Resume Hacking
+                                Welcome back!
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                09:30 am
+                                9:15 am
                             </td>
                             <td>
-                                Workshop: Cryptography
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                10:30 am
-                            </td>
-                            <td>
-                                Workshop: Web APIs
+                                Resume hacking
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                12:00 pm
+                                10:00 am
                             </td>
                             <td>
-                                Lunch break
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                1:00 pm
-                            </td>
-                            <td>
-                                Workshop: Pitching
+                                Advanced workshops
                             </td>
                         </tr>
                         <tr>
                             <td>
-                                2:00 pm
+                                3:30 pm
                             </td>
                             <td>
-                                Guest Speaker
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
-                                3:00 pm
-                            </td>
-                            <td>
-                                Project Pitches, Judging
+                                Guest speaker
                             </td>
                         </tr>
                         <tr>
@@ -223,7 +193,15 @@ const Schedule = () => (
                                 4:00 pm
                             </td>
                             <td>
-                                Awards Presentation, Wrap-up!
+                                Project demo + Judging
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                5:00 pm
+                            </td>
+                            <td>
+                                Closing + Awards
                             </td>
                         </tr>
                     </tbody>
@@ -231,7 +209,7 @@ const Schedule = () => (
             </ScheduleTable>
         </Days>
         <p>All workshops are optional. Balance them with work time!</p>
-        */}
+       
     </ScheduleSection>
 );
 
