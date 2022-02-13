@@ -38,9 +38,9 @@ const PrizeContent = styled('div')`
 
 const Prize = () => (
     <PrizeSection>
-        <Header title='Prize Winners' />
+        <Header title='Prizes' />
         <PrizeContent>
-            <div>
+            {/*<div>
                 <h3>Best Game 🏆</h3>
                 <p><strong>Team True</strong> for their platformer <i>Contrast</i>, which required players to turn platforms on and off to finish the level.</p>
             </div>
@@ -52,7 +52,7 @@ const Prize = () => (
                 <h3>Scavenger Hunt Award 🏆</h3>
                 <p><strong>Team True</strong> for solving 38 out of 53 challenges and a total score of 1,480 points.</p>
             </div>
-            {/*
+            */}
             <div>
                 <h3>Best Website</h3>
                 <p>Show off your HTML, CSS, and JavaScript skills, and make a dazzling website!</p>
@@ -67,16 +67,15 @@ const Prize = () => (
             </div>
             <div>
                 <h3>Bootstrap Award</h3>
-                <p>This award is given to a team that shows perseverence and learns new skills while tackling a difficult challenge.</p>
+                <p>This award is given to a team that shows perseverance and learns new skills while tackling a difficult challenge.</p>
             </div>
-            */}
+            <div>
+                <h3>Scavenger Hunt Challenge</h3>
+                <p>Teams or individuals can earn points by solving a collection of coding puzzles. Whoever scores the most points will win the Scavenger Hunt Award.</p>
+            </div>
+
         </PrizeContent>
-        {/*
-        <Header title='Scavenger Hunt Challenge' />
-        <PrizeContent>
-            <p>New this year, we will have a collection of programming problems of varying difficulty. Teams or individuals can earn points by solving them. Whoever scores the most points will win the Scavenger Hunt Award.</p>
-        </PrizeContent>
-        */}
+        
     </PrizeSection>
 );
 

@@ -44,7 +44,8 @@ const WorkshopContent = styled('div')`
 const Workshop = () => (
     <WorkshopSection>
         <Header title='Workshops' />
-        <WorkshopContent>
+        <h3>Also to be announced (there's a lot of moving parts to this).</h3>
+        {/*<WorkshopContent>
             <div>
                 <h3>Python in 60 minutes or less</h3>
                 <p>Never programmed before? Start here! We'll get you started in a common introductory programming language used by professionals around the world. No outside software required!</p>
@@ -74,6 +75,7 @@ const Workshop = () => (
                 <p>So you've made a project, how do you get other people excited about it? This workshop will get you ready to show your project off for judging.</p>
             </div>
         </WorkshopContent>
+        */}
     </WorkshopSection>
 );
 

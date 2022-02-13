@@ -10,12 +10,12 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import LaunchpadLogo from "components/launchpad/LaunchpadLogo";
 import HeroImage from "images/launchpadhero3.jpg";
 
-var countDownDate = new Date("Oct 10, 2020 09:00:00").getTime();
+var countDownDate = new Date("April 2, 2022 09:00:00").getTime();
 
 // Update the count down every 1 second
-/*
-@ whoever updates this in the future: uncomment the interval variable
-and change countDownDate above to get the coutndown timer working again.
+
+//@ whoever updates this in the future: uncomment the interval variable
+//and change countDownDate above to get the coutndown timer working again.
 var interval = setInterval(function() {
 
     if (window.location.pathname == '/launchpad' || window.location.pathname == '/launchpad/') {
@@ -42,7 +42,7 @@ var interval = setInterval(function() {
         }
     }
 }, 1000);
-*/
+
 
 const fadeIn = keyframes`
     0% {
@@ -190,11 +190,10 @@ const Arrow = ({ color, scale }) => {
 
 const Hero = ({home}) => (
     <Background background={HeroImage}>
-        <HeroLayoutContainer styles={{"margin-top": 0}}>
+        <HeroLayoutContainer styles={{"margin-top": "0"}}>
             <HeroContent>
                 <LaunchpadLogo />
-                <h2>Thank you to all the hackers! We hope to see you again next year!</h2>
-                <h1 id='launchpad-countdown'></h1>
+                <h1 id="launchpad-countdown"></h1>
             </HeroContent>
             <Arrow color="#fff" scale="3" />
         </HeroLayoutContainer>

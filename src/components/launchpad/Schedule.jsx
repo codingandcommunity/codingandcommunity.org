@@ -68,7 +68,8 @@ const ScheduleTable = styled('div')`
 const Schedule = () => (
     <ScheduleSection>
         <Header title='Schedule' />
-        <p>Remember, you don't have to come both days.</p>
+        <h2>To be announced.</h2>
+        {/*
         <Days>
             <ScheduleTable>
                 <h3>October 10th</h3>
@@ -230,6 +231,7 @@ const Schedule = () => (
             </ScheduleTable>
         </Days>
         <p>All workshops are optional. Balance them with work time!</p>
+        */}
     </ScheduleSection>
 );
 
