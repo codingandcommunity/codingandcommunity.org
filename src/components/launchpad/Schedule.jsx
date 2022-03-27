@@ -177,7 +177,7 @@ const Schedule = () => (
                                 10:00 am
                             </td>
                             <td>
-                                Advanced workshops
+                                Advanced workshop
                             </td>
                         </tr>
                         <tr>
@@ -209,7 +209,6 @@ const Schedule = () => (
             </ScheduleTable>
         </Days>
         <p>All workshops are optional. Balance them with work time!</p>
-       
     </ScheduleSection>
 );
 

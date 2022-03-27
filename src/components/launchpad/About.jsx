@@ -28,7 +28,7 @@ const About = () => (
         <Header title='About' />
         <div>
             <p><strong>When:</strong> April 2nd - 3rd </p>
-            <p><strong>Where:</strong> Online </p>
+            <p><strong>Where:</strong> Online (Discord) </p>
             <p><strong>Who:</strong> Grades 8-12</p>
         </div>
         <hr></hr>
